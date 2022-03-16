@@ -1,0 +1,22 @@
+{
+  "name": "portafolio",
+  "version": "1.0.0",
+  "description": "Portafolio con JAVASCRIPT, SASS, GULP y HTML",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch src/scss:build/css"
+  },
+  "keywords": [
+    "SASS",
+    "GULP",
+    "HTML",
+    "CSS",
+    "JAVASCRIPT"
+  ],
+  "author": "Camilo Andres Riveros Rey",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "sass": "^1.49.9"
+  }
+}
