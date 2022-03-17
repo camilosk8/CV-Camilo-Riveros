@@ -1,0 +1,53 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+.contenedor-main {
+  width: 90%;
+  padding: 3rem;
+  margin: 4rem;
+  background-color: v.$negro-opaco;
+  border-radius: 10px;
+  .contenedor-main_interno {
+    display: flex;
+    flex-direction: column;
+  }
+  p {
+    margin: 0;
+    font-size: 2.2rem;
+    font-weight: 500;
+  }
+  @include m.tablet {
+    display: block;
+    padding: 3.5rem;
+    p {
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      line-height: 1.5;
+    }
+  }
+  @include m.desktop {
+    p {
+      font-size: 2.7rem;
+      text-transform: uppercase;
+    }
+  }
+  @include m.desktopXL {
+    padding: 4rem;
+    p {
+      font-size: 3rem;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.perfil {
+  display: flex;
+  img {
+    position: relative;
+    margin-right: 20px;
+    width: 43px;
+    height: 43px;
+  }
+  h2 {
+    position: relative;
+  }
+}

@@ -10,47 +10,46 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="build/css/app.css">
+
 </head>
 
 <body>
-  <header>
-    <div class="header-fondo">
-      <div class="header-fondo_principal">
-      </div>
-      <div class="header-fondo_montaña">
-      </div>
-      <div class="header-fondo_estrellas">
-      </div>
-      <div class="header-fondo_arboles">
-      </div>
-      <div class="header-fondo_neblina">
-      </div>
+  <section class="fondo">
+    <div class="fondo-img">
+      <div class="fondo-img_principal"></div>
+      <div class="fondo-img_montaña"></div>
+      <div class="fondo-img_estrellas"></div>
+      <div class="fondo-img_arboles"></div>
+      <div class="fondo-img_neblina"></div>
     </div>
-  </header>
-
-  <div class="contenedor">
+  </section>
+  <section class="principal">
     <div class="contenedor-saludo">
-      <dic class="contenedor-saludo_texto">
+      <div class="contenedor-saludo_texto">
         <p>Hola<span>-</span> Kaixo<span>-</span>Ola<span>-</span>Hello<span>-</span>Salut<span>-</span>Hallo<span>-</span>Ciao<span>-</span>Olá<span>-</span>Hej<span>-</span>привет<span>-</span>Hola<span>-</span>Buna ziua<span>-</span>Ahoj<span>-</span>Sveiki<span>-</span>Привіт<span>-</span>Tere<span>-</span>Cześć<span>-</span>Živijo<span>-</span>Namaste<span>-</span>Salam<span>-</span>Aloha<span>-</span>Merhaba<span>-</span>Habari<span>-</span>Ni
           Hao
           <span>-</span>Konnichi wa</p>
-      </dic>
+      </div>
     </div>
+
     <div class="contenedor-main">
       <div class="contenedor-main_interno">
-        <h2><img src="img/icono-perfil.svg" alt="">Perfil</h2>
-        <p>Técnico en diseño gráfico, diseño UX/UI, con experiencia en el área de publicidad y desarrollo Web, realizando diseño de piezas gráficas mediante el uso de Suite Adobe, retoque digital, control de calidad, impresión en gran formato de manera masiva,
-          manejo de HTML5, CSS3, JavaScript para programación y diseño de páginas Web, atención y asesoría al cliente. Con competencias como orientación al detalle, recursividad, orientación a resultados y compromiso.</p>
+        <div class="perfil">
+          <img src="../../img/icono-perfil.svg" alt="">
+          <h2>Perfil</h2>
+        </div>
+        <p>Diseñador gráfico, diseño UX/UI, con experiencia en el área de publicidad y desarrollo Web, realizando diseño de piezas gráficas mediante el uso de Suite Adobe, retoque digital, control de calidad, impresión en gran formato de manera masiva, manejo
+          de HTML5, CSS3, JavaScript para programación y diseño de páginas Web, atención y asesoría al cliente. Con competencias como orientación al detalle, recursividad, orientación a resultados y compromiso.</p>
       </div>
     </div>
 
     <div class="contenedor-nav">
       <nav class="contenedor-nav_menu">
-        <div class="menu">
-          <div class="menu-btn">
-            <div class="menu-btn__burguer"></div>
-          </div>
-        </div>
+        <button class="hamburger hamburger--emphatic" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
         <ul>
           <li>Inicio</li>
           <li>Perfil</li>
@@ -60,30 +59,31 @@
           <li>Intereses</li>
         </ul>
       </nav>
+    </div>
+  </section>
+  <footer>
+    <div class="contenedor-redes">
+      <div class="contenedor-redes_cajas">
+        <div class="redes-telefono" active>
+          <a href="">3202488118</a>
 
-      <div class="contenedor-redes">
-        <div class="contenedor-redes_cajas">
-          <div class="redes-telefono" active>
-            <a href="">3202488118</a>
-            <img src="img/redes-telefono.svg" alt="">
-          </div>
-          <div class="redes-correo">
-            <a href="">camilosk8.rey@gm</a>
-            <img src="img/redes-correo.svg" alt="">
-          </div>
-          <div class="redes-behance">
-            <a href="https://www.behance.net/camilosk8" target="_blank">camilosk8</a>
-            <img src="img/redes-behance.svg" alt="">
-          </div>
-          <div class="redes-github">
-            <a href="https://github.com/camilosk8" target="_blank">camilosk8</a>
-            <img src="img/redes-github.svg" alt="">
-          </div>
+        </div>
+        <div class="redes-correo">
+          <a href="">camilosk8.rey@gm</a>
+
+        </div>
+        <div class="redes-behance">
+          <a href="https://www.behance.net/camilosk8" target="_blank">camilosk8</a>
+
+        </div>
+        <div class="redes-github">
+          <a href="https://github.com/camilosk8" target="_blank">camilosk8</a>
+
         </div>
       </div>
     </div>
-  </div>
-  <script src="js/main.js"></script>
+  </footer>
+  <script src="build/js/app.js"></script>
 
 </body>
 
