@@ -29,8 +29,40 @@
   gap: $espaciado;
 }
 
-@mixin resetear-lista {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+@mixin border-redes {
+  background-color: v.$rojo;
+  border-radius: 5px;
+  width: 45px;
+  height: 45px;
+  margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  img {
+    width: 30px;
+    position: fixed;
+  }
+  &:hover {
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.5s;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px;
+    img {
+      padding: 7px;
+      position: relative;
+    }
+    a {
+      opacity: 1;
+      display: flex;
+      justify-content: flex-end;
+      color: v.$blanco;
+      font-weight: 600;
+      font-size: 26px;
+      padding: 3px 10px;
+      opacity: 1;
+      cursor: pointer;
+    }
+  }
 }

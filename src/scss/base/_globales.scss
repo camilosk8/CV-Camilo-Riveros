@@ -13,6 +13,7 @@ html {
 
 body {
   font-family: v.$fuenteParrafos;
+  position: absolute;
   color: v.$blanco;
   height: 100vh;
   background-color: v.$gris;
@@ -22,10 +23,10 @@ body {
 }
 
 .principal {
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   @include m.tablet {
     justify-content: space-between;

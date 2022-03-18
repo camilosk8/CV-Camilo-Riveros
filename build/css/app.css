@@ -11,6 +11,7 @@ html {
 
 body {
   font-family: "Oswald";
+  position: absolute;
   color: #fff;
   height: 100vh;
   background-color: #5f5f5f;
@@ -20,10 +21,10 @@ body.fijar-body {
 }
 
 .principal {
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 @media (min-width: 768px) {
@@ -407,30 +408,38 @@ template {
 }
 
 .contenedor-nav {
-  position: absolute;
-  display: flex;
   width: 100%;
   height: 100vh;
-  flex-direction: row;
-  justify-content: flex-end;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: #000000ce;
+  padding: 0 3rem 0 3rem;
 }
 @media (min-width: 768px) {
   .contenedor-nav {
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
     display: block;
     width: 30%;
-    padding: 3rem;
+    padding: 0 2rem 0 2rem;
     height: 100%;
+    background-color: transparent;
+  }
+  .contenedor-nav .hamburger {
+    display: none;
   }
 }
 
 .contenedor-nav_menu {
   display: flex;
   flex-direction: column;
-  padding-right: 30px;
+  justify-content: flex-end;
 }
 .contenedor-nav_menu ul {
-  font-size: 33px;
+  font-size: 24px;
   font-weight: 600;
   list-style: none;
   position: relative;
@@ -438,7 +447,7 @@ template {
   padding: 0;
 }
 .contenedor-nav_menu ul li {
-  margin: 5px;
+  margin: 7px 0;
   justify-content: flex-end;
   transition: all 0.3s;
 }
@@ -446,23 +455,96 @@ template {
   color: #EB282B;
   cursor: pointer;
 }
+@media (min-width: 768px) {
+  .contenedor-nav_menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .contenedor-nav_menu ul {
+    font-size: 17px;
+  }
+}
+@media (min-width: 1200px) {
+  .contenedor-nav_menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .contenedor-nav_menu ul {
+    font-size: 23px;
+  }
+}
+
+.perfil {
+  display: flex;
+}
+.perfil img {
+  position: relative;
+  margin-top: 5px;
+  width: 40px;
+  height: 40px;
+}
+.perfil h2 {
+  margin-left: 20px;
+  position: relative;
+}
 
 .contenedor-saludo {
   display: none;
 }
 @media (min-width: 768px) {
   .contenedor-saludo {
-    display: block;
+    display: flex;
+    justify-content: center;
     width: 30%;
-    padding: 0 3rem 0 3rem;
+    height: 100vh;
+    color: #fff;
+    overflow: hidden;
+  }
+  .contenedor-saludo .contenedor-saludo_texto {
+    overflow: hidden;
+    display: inline-block;
+    height: fit-content;
+    transform: translateX(-4427.3px);
+    height: max-content;
+    width: 100px;
+    padding: 25px 0 25px 0;
+    background-color: #00000078;
+    backdrop-filter: blur(7px);
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    font-size: 70px;
+    font-weight: 600;
+  }
+  .contenedor-saludo .contenedor-saludo_texto p {
     height: 100%;
+    display: block;
+    position: relative;
+    margin: 0;
+    animation-duration: 80s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-name: holaTexto;
+  }
+  @keyframes holaTexto {
+    0% {
+      top: 81.5%;
+    }
+    100% {
+      top: 0%;
+    }
+  }
+  .contenedor-saludo .contenedor-saludo_texto p span {
+    color: #EB282B;
   }
 }
 
 .contenedor-main {
   width: 90%;
   padding: 3rem;
-  margin: 4rem;
+  margin: 3rem;
+  max-height: 90%;
   background-color: #00000078;
   border-radius: 10px;
 }
@@ -472,7 +554,7 @@ template {
 }
 .contenedor-main p {
   margin: 0;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   font-weight: 500;
 }
 @media (min-width: 768px) {
@@ -481,14 +563,14 @@ template {
     padding: 3.5rem;
   }
   .contenedor-main p {
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-transform: uppercase;
     line-height: 1.5;
   }
 }
 @media (min-width: 992px) {
   .contenedor-main p {
-    font-size: 2.7rem;
+    font-size: 2.2rem;
     text-transform: uppercase;
   }
 }
@@ -497,26 +579,13 @@ template {
     padding: 4rem;
   }
   .contenedor-main p {
-    font-size: 3rem;
+    font-size: 2.9rem;
     text-transform: uppercase;
   }
 }
 
-.perfil {
-  display: flex;
-}
-.perfil img {
-  position: relative;
-  margin-right: 20px;
-  width: 43px;
-  height: 43px;
-}
-.perfil h2 {
-  position: relative;
-}
-
 .hamburger {
-  padding: 30px 0px;
+  padding: 60px 0 20px 0px;
   display: flex;
   flex-direction: row-reverse;
   cursor: pointer;
@@ -624,4 +693,186 @@ template {
   top: -80px;
   transform: translate3d(-80px, 80px, 0) rotate(-45deg);
   transition: right 0.125s ease-out, top 0.05s 0.125s linear, transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.contenedor-redes {
+  display: none;
+}
+@media (min-width: 768px) {
+  .contenedor-redes {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+  }
+}
+
+.contenedor-redes_cajas {
+  width: 50%;
+  padding-right: 30px;
+  padding-bottom: 18px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
+  text-transform: uppercase;
+}
+
+.redes-telefono {
+  background-color: #EB282B;
+  border-radius: 5px;
+  width: 45px;
+  height: 45px;
+  margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.redes-telefono img {
+  width: 30px;
+  position: fixed;
+}
+.redes-telefono:hover {
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.5s;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px;
+}
+.redes-telefono:hover img {
+  padding: 7px;
+  position: relative;
+}
+.redes-telefono:hover a {
+  opacity: 1;
+  display: flex;
+  justify-content: flex-end;
+  color: #fff;
+  font-weight: 600;
+  font-size: 26px;
+  padding: 3px 10px;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.redes-correo {
+  background-color: #EB282B;
+  border-radius: 5px;
+  width: 45px;
+  height: 45px;
+  margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.redes-correo img {
+  width: 30px;
+  position: fixed;
+}
+.redes-correo:hover {
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.5s;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px;
+}
+.redes-correo:hover img {
+  padding: 7px;
+  position: relative;
+}
+.redes-correo:hover a {
+  opacity: 1;
+  display: flex;
+  justify-content: flex-end;
+  color: #fff;
+  font-weight: 600;
+  font-size: 26px;
+  padding: 3px 10px;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.redes-github {
+  background-color: #EB282B;
+  border-radius: 5px;
+  width: 45px;
+  height: 45px;
+  margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.redes-github img {
+  width: 30px;
+  position: fixed;
+}
+.redes-github:hover {
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.5s;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px;
+}
+.redes-github:hover img {
+  padding: 7px;
+  position: relative;
+}
+.redes-github:hover a {
+  opacity: 1;
+  display: flex;
+  justify-content: flex-end;
+  color: #fff;
+  font-weight: 600;
+  font-size: 26px;
+  padding: 3px 10px;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.redes-behance {
+  background-color: #EB282B;
+  border-radius: 5px;
+  width: 45px;
+  height: 45px;
+  margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.redes-behance img {
+  width: 30px;
+  position: fixed;
+}
+.redes-behance:hover {
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.5s;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px;
+}
+.redes-behance:hover img {
+  padding: 7px;
+  position: relative;
+}
+.redes-behance:hover a {
+  opacity: 1;
+  display: flex;
+  justify-content: flex-end;
+  color: #fff;
+  font-weight: 600;
+  font-size: 26px;
+  padding: 3px 10px;
+  opacity: 1;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .cont-footer {
+    display: none;
+  }
 }
