@@ -1,5 +1,5 @@
-@use 'variables' as v;
-@use 'mixins' as m;
+@use "variables" as v;
+@use "mixins" as m;
 html {
     font-size: 62.5%;
     box-sizing: border-box;
@@ -22,6 +22,7 @@ body {
 }
 
 .principal {
+    z-index: 1;
     height: 100vh;
     width: 100vw;
     display: flex;

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   font-size: 62.5%;
   box-sizing: border-box;
@@ -20,6 +21,7 @@ body.fijar-body {
 }
 
 .principal {
+  z-index: 1;
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -409,7 +411,7 @@ template {
 .contenedor-nav {
   width: 100%;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -451,7 +453,7 @@ template {
   transition: all 0.3s;
 }
 .contenedor-nav_menu ul li:hover {
-  color: #EB282B;
+  color: #eb282b;
   cursor: pointer;
 }
 @media (min-width: 768px) {
@@ -535,12 +537,12 @@ template {
     }
   }
   .contenedor-saludo .contenedor-saludo_texto p span {
-    color: #EB282B;
+    color: #eb282b;
   }
 }
 
 .contenedor-main {
-  width: 90%;
+  width: 100%;
   padding: 3rem;
   margin: 2rem;
   max-height: 90%;
@@ -719,7 +721,7 @@ template {
 
 @media (min-width: 768px) {
   .redes-telefono {
-    background-color: #EB282B;
+    background-color: #eb282b;
     border-radius: 5px;
     width: 37px;
     height: 37px;
@@ -761,7 +763,7 @@ template {
 }
 @media (min-width: 992px) {
   .redes-telefono {
-    background-color: #EB282B;
+    background-color: #eb282b;
     border-radius: 5px;
     width: 45px;
     height: 45px;
@@ -804,7 +806,7 @@ template {
 
 @media (min-width: 768px) {
   .redes-correo {
-    background-color: #EB282B;
+    background-color: #eb282b;
     border-radius: 5px;
     width: 37px;
     height: 37px;
@@ -846,7 +848,7 @@ template {
 }
 @media (min-width: 992px) {
   .redes-correo {
-    background-color: #EB282B;
+    background-color: #eb282b;
     border-radius: 5px;
     width: 45px;
     height: 45px;
@@ -889,7 +891,7 @@ template {
 
 @media (min-width: 768px) {
   .redes-github {
-    background-color: #EB282B;
+    background-color: #eb282b;
     border-radius: 5px;
     width: 37px;
     height: 37px;
@@ -931,7 +933,7 @@ template {
 }
 @media (min-width: 992px) {
   .redes-github {
-    background-color: #EB282B;
+    background-color: #eb282b;
     border-radius: 5px;
     width: 45px;
     height: 45px;
@@ -974,7 +976,7 @@ template {
 
 @media (min-width: 768px) {
   .redes-behance {
-    background-color: #EB282B;
+    background-color: #eb282b;
     border-radius: 5px;
     width: 37px;
     height: 37px;
@@ -1016,7 +1018,7 @@ template {
 }
 @media (min-width: 992px) {
   .redes-behance {
-    background-color: #EB282B;
+    background-color: #eb282b;
     border-radius: 5px;
     width: 45px;
     height: 45px;
@@ -1064,18 +1066,48 @@ template {
 }
 
 .fondo {
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
+  z-index: -1;
+  position: absolute;
 }
 .fondo .fondo-img {
-  position: fixed;
   width: 100vw;
-  height: 100vh;
 }
 
 .fondo-img_principal {
+  z-index: 1;
   width: 100vw;
-  height: 100vw;
+  height: 100vh;
+  background-size: cover;
+  position: absolute;
   background-image: url("../../img/fondo.jpg");
+}
+
+.fondo-img_estrellas {
+  z-index: 2;
+  width: 100vw;
+  height: 350px;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-image: url("../../img/fondo-estrellas.png");
+}
+@keyframes movimiento {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+  0% {
+    transform: translateX(0%);
+  }
+}
+
+.fondo-img_montaña {
+  z-index: 3;
+  opacity: 1;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-size: cover;
+  background-image: url("../../img/fondo-montana.png");
 }
