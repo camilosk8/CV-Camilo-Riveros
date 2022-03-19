@@ -1,7 +1,7 @@
-@use 'base/variables' as v;
-@use 'base/mixins' as m;
+@use "base/variables" as v;
+@use "base/mixins" as m;
 .contenedor-main {
-    width: 90%;
+    width: 100%;
     padding: 3rem;
     margin: 2rem;
     max-height: 90%;
