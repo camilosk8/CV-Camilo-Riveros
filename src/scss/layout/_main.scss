@@ -1,41 +1,42 @@
 @use 'base/variables' as v;
 @use 'base/mixins' as m;
 .contenedor-main {
-  width: 90%;
-  padding: 3rem;
-  margin: 3rem;
-  max-height: 90%;
-  background-color: v.$negro-opaco;
-  border-radius: 10px;
-  .contenedor-main_interno {
-    display: flex;
-    flex-direction: column;
-  }
-  p {
-    margin: 0;
-    font-size: 1.8rem;
-    font-weight: 500;
-  }
-  @include m.tablet {
-    display: block;
-    padding: 3.5rem;
-    p {
-      font-size: 2rem;
-      text-transform: uppercase;
-      line-height: 1.5;
+    width: 90%;
+    padding: 3rem;
+    margin: 2rem;
+    max-height: 90%;
+    background-color: v.$negro-opaco;
+    border-radius: 10px;
+    color: v.$blanco;
+    .contenedor-main_interno {
+        display: flex;
+        flex-direction: column;
     }
-  }
-  @include m.desktop {
     p {
-      font-size: 2.2rem;
-      text-transform: uppercase;
+        margin: 0;
+        font-size: 1.8rem;
+        font-weight: 500;
     }
-  }
-  @include m.desktopXL {
-    padding: 4rem;
-    p {
-      font-size: 2.9rem;
-      text-transform: uppercase;
+    @include m.tablet {
+        display: block;
+        padding: 3.5rem;
+        p {
+            font-size: 2rem;
+            text-transform: uppercase;
+            line-height: 1.5;
+        }
     }
-  }
+    @include m.desktop {
+        p {
+            font-size: 2.2rem;
+            text-transform: uppercase;
+        }
+    }
+    @include m.desktopXL {
+        padding: 4rem;
+        p {
+            font-size: 2.9rem;
+            text-transform: uppercase;
+        }
+    }
 }

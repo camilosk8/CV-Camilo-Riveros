@@ -1,68 +1,74 @@
 @use 'variables' as v;
 @mixin telefono () {
-  @media (min-width: v.$telefono) {
-    @content;
-  }
+    @media (min-width: v.$telefono) {
+        @content;
+    }
 }
 
 @mixin tablet () {
-  @media (min-width: v.$tablet) {
-    @content;
-  }
+    @media (min-width: v.$tablet) {
+        @content;
+    }
 }
 
 @mixin desktop () {
-  @media (min-width: v.$desktop) {
-    @content;
-  }
+    @media (min-width: v.$desktop) {
+        @content;
+    }
 }
 
 @mixin desktopXL () {
-  @media (min-width: v.$desktopXL) {
-    @content;
-  }
+    @media (min-width: v.$desktopXL) {
+        @content;
+    }
 }
 
 @mixin grid ($columnas, $espaciado) {
-  display: grid;
-  grid-template-columns: repeat($columnas, 1fr);
-  gap: $espaciado;
+    display: grid;
+    grid-template-columns: repeat($columnas, 1fr);
+    gap: $espaciado;
 }
 
-@mixin border-redes {
-  background-color: v.$rojo;
-  border-radius: 5px;
-  width: 45px;
-  height: 45px;
-  margin-bottom: 20px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  img {
-    width: 30px;
-    position: fixed;
-  }
-  &:hover {
-    cursor: pointer;
-    width: 100%;
-    transition: all 0.5s;
+@mixin redes($ancho, $alto, $texto) {
+    background-color: v.$rojo;
+    border-radius: 5px;
+    width: $ancho;
+    height: $alto;
+    margin-bottom: 20px;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    padding: 0px;
+    align-items: center;
     img {
-      padding: 7px;
-      position: relative;
+        padding: 10px;
+        position: relative;
     }
     a {
-      opacity: 1;
-      display: flex;
-      justify-content: flex-end;
-      color: v.$blanco;
-      font-weight: 600;
-      font-size: 26px;
-      padding: 3px 10px;
-      opacity: 1;
-      cursor: pointer;
+        opacity: 0;
     }
-  }
+    &:hover {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        transition: all 0.5s;
+        img {
+            transition: all 0.5s;
+            position: relative;
+            width: 39px;
+            height: 39px;
+        }
+        a {
+            padding: 7px;
+            transition: opacity .6s ease-in-out;
+            opacity: 1;
+            font-weight: 600;
+            font-size: $texto;
+            color: v.$blanco;
+            display: inline-block;
+        }
+    }
 }
+
+// @mixin border-redes {
+// }
