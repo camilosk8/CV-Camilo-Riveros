@@ -12,9 +12,8 @@ html {
 body {
   font-family: "Oswald";
   position: absolute;
-  color: #fff;
   height: 100vh;
-  background-color: #5f5f5f;
+  overflow: hidden;
 }
 body.fijar-body {
   overflow: hidden;
@@ -416,15 +415,15 @@ template {
   justify-content: space-between;
   background-color: #000000ce;
   padding: 0 3rem 0 3rem;
+  color: #fff;
 }
 @media (min-width: 768px) {
   .contenedor-nav {
     flex-direction: column;
     justify-content: space-between;
     position: relative;
-    display: block;
     width: 30%;
-    padding: 0 2rem 0 2rem;
+    padding: 0 2rem 0 1rem;
     height: 100%;
     background-color: transparent;
   }
@@ -543,10 +542,11 @@ template {
 .contenedor-main {
   width: 90%;
   padding: 3rem;
-  margin: 3rem;
+  margin: 2rem;
   max-height: 90%;
   background-color: #00000078;
   border-radius: 10px;
+  color: #fff;
 }
 .contenedor-main .contenedor-main_interno {
   display: flex;
@@ -700,17 +700,15 @@ template {
 }
 @media (min-width: 768px) {
   .contenedor-redes {
-    width: 100%;
-    position: relative;
     display: flex;
+    position: relative;
     justify-content: flex-start;
     flex-direction: row-reverse;
   }
 }
 
 .contenedor-redes_cajas {
-  width: 50%;
-  padding-right: 30px;
+  width: 100%;
   padding-bottom: 18px;
   display: flex;
   justify-content: flex-end;
@@ -719,160 +717,365 @@ template {
   text-transform: uppercase;
 }
 
-.redes-telefono {
-  background-color: #EB282B;
-  border-radius: 5px;
-  width: 45px;
-  height: 45px;
-  margin-bottom: 20px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
+@media (min-width: 768px) {
+  .redes-telefono {
+    background-color: #EB282B;
+    border-radius: 5px;
+    width: 37px;
+    height: 37px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .redes-telefono img {
+    padding: 10px;
+    position: relative;
+  }
+  .redes-telefono a {
+    opacity: 0;
+  }
+  .redes-telefono:hover {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    transition: all 0.5s;
+  }
+  .redes-telefono:hover img {
+    transition: all 0.5s;
+    position: relative;
+    width: 39px;
+    height: 39px;
+  }
+  .redes-telefono:hover a {
+    padding: 7px;
+    transition: opacity 0.6s ease-in-out;
+    opacity: 1;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #fff;
+    display: inline-block;
+  }
 }
-.redes-telefono img {
-  width: 30px;
-  position: fixed;
-}
-.redes-telefono:hover {
-  cursor: pointer;
-  width: 100%;
-  transition: all 0.5s;
-  display: flex;
-  justify-content: space-between;
-  padding: 0px;
-}
-.redes-telefono:hover img {
-  padding: 7px;
-  position: relative;
-}
-.redes-telefono:hover a {
-  opacity: 1;
-  display: flex;
-  justify-content: flex-end;
-  color: #fff;
-  font-weight: 600;
-  font-size: 26px;
-  padding: 3px 10px;
-  opacity: 1;
-  cursor: pointer;
-}
-
-.redes-correo {
-  background-color: #EB282B;
-  border-radius: 5px;
-  width: 45px;
-  height: 45px;
-  margin-bottom: 20px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
-.redes-correo img {
-  width: 30px;
-  position: fixed;
-}
-.redes-correo:hover {
-  cursor: pointer;
-  width: 100%;
-  transition: all 0.5s;
-  display: flex;
-  justify-content: space-between;
-  padding: 0px;
-}
-.redes-correo:hover img {
-  padding: 7px;
-  position: relative;
-}
-.redes-correo:hover a {
-  opacity: 1;
-  display: flex;
-  justify-content: flex-end;
-  color: #fff;
-  font-weight: 600;
-  font-size: 26px;
-  padding: 3px 10px;
-  opacity: 1;
-  cursor: pointer;
-}
-
-.redes-github {
-  background-color: #EB282B;
-  border-radius: 5px;
-  width: 45px;
-  height: 45px;
-  margin-bottom: 20px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
-.redes-github img {
-  width: 30px;
-  position: fixed;
-}
-.redes-github:hover {
-  cursor: pointer;
-  width: 100%;
-  transition: all 0.5s;
-  display: flex;
-  justify-content: space-between;
-  padding: 0px;
-}
-.redes-github:hover img {
-  padding: 7px;
-  position: relative;
-}
-.redes-github:hover a {
-  opacity: 1;
-  display: flex;
-  justify-content: flex-end;
-  color: #fff;
-  font-weight: 600;
-  font-size: 26px;
-  padding: 3px 10px;
-  opacity: 1;
-  cursor: pointer;
+@media (min-width: 992px) {
+  .redes-telefono {
+    background-color: #EB282B;
+    border-radius: 5px;
+    width: 45px;
+    height: 45px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .redes-telefono img {
+    padding: 10px;
+    position: relative;
+  }
+  .redes-telefono a {
+    opacity: 0;
+  }
+  .redes-telefono:hover {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    transition: all 0.5s;
+  }
+  .redes-telefono:hover img {
+    transition: all 0.5s;
+    position: relative;
+    width: 39px;
+    height: 39px;
+  }
+  .redes-telefono:hover a {
+    padding: 7px;
+    transition: opacity 0.6s ease-in-out;
+    opacity: 1;
+    font-weight: 600;
+    font-size: 1.7rem;
+    color: #fff;
+    display: inline-block;
+  }
 }
 
-.redes-behance {
-  background-color: #EB282B;
-  border-radius: 5px;
-  width: 45px;
-  height: 45px;
-  margin-bottom: 20px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
+@media (min-width: 768px) {
+  .redes-correo {
+    background-color: #EB282B;
+    border-radius: 5px;
+    width: 37px;
+    height: 37px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .redes-correo img {
+    padding: 10px;
+    position: relative;
+  }
+  .redes-correo a {
+    opacity: 0;
+  }
+  .redes-correo:hover {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    transition: all 0.5s;
+  }
+  .redes-correo:hover img {
+    transition: all 0.5s;
+    position: relative;
+    width: 39px;
+    height: 39px;
+  }
+  .redes-correo:hover a {
+    padding: 7px;
+    transition: opacity 0.6s ease-in-out;
+    opacity: 1;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #fff;
+    display: inline-block;
+  }
 }
-.redes-behance img {
-  width: 30px;
-  position: fixed;
+@media (min-width: 992px) {
+  .redes-correo {
+    background-color: #EB282B;
+    border-radius: 5px;
+    width: 45px;
+    height: 45px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .redes-correo img {
+    padding: 10px;
+    position: relative;
+  }
+  .redes-correo a {
+    opacity: 0;
+  }
+  .redes-correo:hover {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    transition: all 0.5s;
+  }
+  .redes-correo:hover img {
+    transition: all 0.5s;
+    position: relative;
+    width: 39px;
+    height: 39px;
+  }
+  .redes-correo:hover a {
+    padding: 7px;
+    transition: opacity 0.6s ease-in-out;
+    opacity: 1;
+    font-weight: 600;
+    font-size: 1.7rem;
+    color: #fff;
+    display: inline-block;
+  }
 }
-.redes-behance:hover {
-  cursor: pointer;
-  width: 100%;
-  transition: all 0.5s;
-  display: flex;
-  justify-content: space-between;
-  padding: 0px;
+
+@media (min-width: 768px) {
+  .redes-github {
+    background-color: #EB282B;
+    border-radius: 5px;
+    width: 37px;
+    height: 37px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .redes-github img {
+    padding: 10px;
+    position: relative;
+  }
+  .redes-github a {
+    opacity: 0;
+  }
+  .redes-github:hover {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    transition: all 0.5s;
+  }
+  .redes-github:hover img {
+    transition: all 0.5s;
+    position: relative;
+    width: 39px;
+    height: 39px;
+  }
+  .redes-github:hover a {
+    padding: 7px;
+    transition: opacity 0.6s ease-in-out;
+    opacity: 1;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #fff;
+    display: inline-block;
+  }
 }
-.redes-behance:hover img {
-  padding: 7px;
-  position: relative;
+@media (min-width: 992px) {
+  .redes-github {
+    background-color: #EB282B;
+    border-radius: 5px;
+    width: 45px;
+    height: 45px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .redes-github img {
+    padding: 10px;
+    position: relative;
+  }
+  .redes-github a {
+    opacity: 0;
+  }
+  .redes-github:hover {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    transition: all 0.5s;
+  }
+  .redes-github:hover img {
+    transition: all 0.5s;
+    position: relative;
+    width: 39px;
+    height: 39px;
+  }
+  .redes-github:hover a {
+    padding: 7px;
+    transition: opacity 0.6s ease-in-out;
+    opacity: 1;
+    font-weight: 600;
+    font-size: 1.7rem;
+    color: #fff;
+    display: inline-block;
+  }
 }
-.redes-behance:hover a {
-  opacity: 1;
-  display: flex;
-  justify-content: flex-end;
-  color: #fff;
-  font-weight: 600;
-  font-size: 26px;
-  padding: 3px 10px;
-  opacity: 1;
-  cursor: pointer;
+
+@media (min-width: 768px) {
+  .redes-behance {
+    background-color: #EB282B;
+    border-radius: 5px;
+    width: 37px;
+    height: 37px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .redes-behance img {
+    padding: 10px;
+    position: relative;
+  }
+  .redes-behance a {
+    opacity: 0;
+  }
+  .redes-behance:hover {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    transition: all 0.5s;
+  }
+  .redes-behance:hover img {
+    transition: all 0.5s;
+    position: relative;
+    width: 39px;
+    height: 39px;
+  }
+  .redes-behance:hover a {
+    padding: 7px;
+    transition: opacity 0.6s ease-in-out;
+    opacity: 1;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #fff;
+    display: inline-block;
+  }
+}
+@media (min-width: 992px) {
+  .redes-behance {
+    background-color: #EB282B;
+    border-radius: 5px;
+    width: 45px;
+    height: 45px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .redes-behance img {
+    padding: 10px;
+    position: relative;
+  }
+  .redes-behance a {
+    opacity: 0;
+  }
+  .redes-behance:hover {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    transition: all 0.5s;
+  }
+  .redes-behance:hover img {
+    transition: all 0.5s;
+    position: relative;
+    width: 39px;
+    height: 39px;
+  }
+  .redes-behance:hover a {
+    padding: 7px;
+    transition: opacity 0.6s ease-in-out;
+    opacity: 1;
+    font-weight: 600;
+    font-size: 1.7rem;
+    color: #fff;
+    display: inline-block;
+  }
 }
 
 @media (min-width: 768px) {
   .cont-footer {
     display: none;
   }
+}
+
+.fondo {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+}
+.fondo .fondo-img {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+
+.fondo-img_principal {
+  width: 100vw;
+  height: 100vw;
+  background-image: url("../../img/fondo.jpg");
 }

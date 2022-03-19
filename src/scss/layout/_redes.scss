@@ -1,47 +1,65 @@
 @use 'base/variables' as v;
 @use 'base/mixins' as m;
 .contenedor-redes {
-  display: none;
-  @include m.tablet {
-    width: 100%;
-    position: relative;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: row-reverse;
-  }
+    display: none;
+    @include m.tablet {
+        display: flex;
+        position: relative;
+        justify-content: flex-start;
+        flex-direction: row-reverse;
+    }
 }
 
 .contenedor-redes_cajas {
-  width: 50%;
-  padding-right: 30px;
-  padding-bottom: 18px;
-  display: flex;
-  justify-content: flex-end;
-  flex-direction: column;
-  align-items: flex-end;
-  text-transform: uppercase;
+    width: 100%;
+    padding-bottom: 18px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-end;
+    text-transform: uppercase;
 }
 
 .redes-telefono {
-  @include m.border-redes;
+    @include m.tablet {
+        @include m.redes(37px, 37px, 1rem);
+    }
+    @include m.desktop {
+        @include m.redes(45px, 45px, 1.7rem);
+    }
 }
 
 .redes-correo {
-  @include m.border-redes;
+    @include m.tablet {
+        @include m.redes(37px, 37px, 1rem);
+    }
+    @include m.desktop {
+        @include m.redes(45px, 45px, 1.7rem);
+    }
 }
 
 .redes-github {
-  @include m.border-redes;
+    @include m.tablet {
+        @include m.redes(37px, 37px, 1rem);
+    }
+    @include m.desktop {
+        @include m.redes(45px, 45px, 1.7rem);
+    }
 }
 
 .redes-behance {
-  @include m.border-redes;
+    @include m.tablet {
+        @include m.redes(37px, 37px, 1rem);
+    }
+    @include m.desktop {
+        @include m.redes(45px, 45px, 1.7rem);
+    }
 }
 
 .cont-footer {
-  @include m.tablet {
-    display: none;
-  }
+    @include m.tablet {
+        display: none;
+    }
 }
 
 // .cont-footer {

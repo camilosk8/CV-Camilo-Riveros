@@ -1,0 +1,18 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+.fondo {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    .fondo-img {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+    }
+}
+
+.fondo-img_principal {
+    width: 100vw;
+    height: 100vw;
+    background-image: url('../../img/fondo.jpg');
+}
