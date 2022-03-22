@@ -1,79 +1,137 @@
-  @use 'base/variables' as v;
-  @use 'base/mixins' as m;
-  .contenedor-nav {
-    width: 100%;
-    height: 100vh;
-    position: absolute;
+@use "base/variables" as v;
+@use "base/mixins" as m;
+.contenedor-nav {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 3rem 0 3rem;
+  background-color: v.$negro-opaco_oscuro;
+  @include m.tablet {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: v.$negro-opaco_oscuro;
-    padding: 0 3rem 0 3rem;
-    color: v.$blanco;
-    @include m.tablet {
-      flex-direction: column;
-      justify-content: space-between;
-      .hamburger {
-        display: none;
+    position: relative;
+    width: 30%;
+    padding: 0 2rem 0 2rem;
+    height: 100%;
+    background-color: transparent;
+  }
+}
+.contenedor-nav_menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  .nav-menu {
+    font-size: 22px;
+    font-weight: 600;
+    list-style: none;
+    position: relative;
+    text-align: right;
+    padding: 0;
+    text-transform: uppercase;
+    li {
+      width: 100%;
+      height: 35px;
+      margin: 10px 0;
+      text-align: right;
+      transition: all 0.3s;
+      a {
+        padding: 0;
+        justify-content: center;
+        color: v.$blanco;
       }
-      position: relative;
-      display: block;
-      width: 30%;
-      padding: 0 2rem 0 2rem;
-      height: 100%;
-      background-color: transparent;
     }
   }
-  
-  .contenedor-nav_menu {
+
+  @include m.tablet {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    ul {
-      font-size: 24px;
-      font-weight: 600;
-      list-style: none;
-      position: relative;
-      text-align: right;
-      padding: 0;
+    justify-content: space-between;
+    background-color: transparent;
+    .nav-menu {
+      margin: 20px 0;
+      font-size: 14px;
       li {
-        margin: 7px 0;
-        justify-content: flex-end;
-        transition: all 0.3s;
+        height: 30px;
+        margin: 0;
+        &:hover {
+          background-color: transparent;
+        }
+        a {
+          &:hover {
+            color: v.$rojo;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .icono-hamburguesa {
+      display: none;
+    }
+    .icono-nav {
+      display: none;
+    }
+  }
+  @include m.desktopXL {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: transparent;
+    .nav-menu {
+      margin: 20px 0;
+      font-size: 19px;
+      li {
+        height: 35px;
+        margin: 0;
         &:hover {
           color: v.$rojo;
           cursor: pointer;
         }
       }
     }
-    @include m.tablet {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      ul {
-        font-size: 17px;
-      }
-    }
-    @include m.desktopXL {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      ul {
-        font-size: 23px;
-      }
-    }
   }
-  
-  .perfil {
+}
+.hamburguesa {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: start;
+  margin: 25px 0 25px 0;
+  padding: 30px;
+  .icono-hamburguesa {
     display: flex;
+    position: fixed;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 20px;
+    height: 20px;
     img {
-      position: relative;
-      margin-top: 5px;
       width: 40px;
       height: 40px;
     }
-    h2 {
-      margin-left: 20px;
-      position: relative;
-    }
   }
+  @include m.tablet {
+    display: none;
+  }
+}
+
+.perfil {
+  display: flex;
+  img {
+    position: relative;
+    margin-top: 5px;
+    width: 40px;
+    height: 40px;
+  }
+  h2 {
+    margin-left: 20px;
+    position: relative;
+  }
+}
