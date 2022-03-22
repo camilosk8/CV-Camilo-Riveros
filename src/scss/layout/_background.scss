@@ -27,7 +27,7 @@
   animation: fondo_estrellas 80s ease infinite;
   @keyframes fondo_estrellas {
     0% {
-      opacity: 2%;
+      opacity: 20%;
       right: 0%;
     }
     50% {
@@ -35,7 +35,7 @@
       right: 20%;
     }
     100% {
-      opacity: 2%;
+      opacity: 20%;
       right: 0%;
     }
   }

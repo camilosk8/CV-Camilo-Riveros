@@ -1,65 +1,68 @@
-@use 'base/variables' as v;
-@use 'base/mixins' as m;
+@use "base/variables" as v;
+@use "base/mixins" as m;
 .contenedor-redes {
-    display: none;
-    @include m.tablet {
-        display: flex;
-        position: relative;
-        justify-content: flex-start;
-        flex-direction: row-reverse;
-    }
+  display: none;
+  @include m.tablet {
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+  }
 }
 
 .contenedor-redes_cajas {
-    width: 100%;
-    padding-bottom: 18px;
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: column;
-    align-items: flex-end;
-    text-transform: uppercase;
+  width: 100%;
+  padding-bottom: 18px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
+  text-transform: uppercase;
+  @include m.desktop {
+    width: 80%;
+  }
 }
 
 .redes-telefono {
-    @include m.tablet {
-        @include m.redes(37px, 37px, 1rem);
-    }
-    @include m.desktop {
-        @include m.redes(45px, 45px, 1.7rem);
-    }
+  @include m.tablet {
+    @include m.redes(36px, 36px, 1rem);
+  }
+  @include m.desktop {
+    @include m.redes(40px, 40px, 1.6rem);
+  }
 }
 
 .redes-correo {
-    @include m.tablet {
-        @include m.redes(37px, 37px, 1rem);
-    }
-    @include m.desktop {
-        @include m.redes(45px, 45px, 1.7rem);
-    }
+  @include m.tablet {
+    @include m.redes(36px, 36px, 1rem);
+  }
+  @include m.desktop {
+    @include m.redes(40px, 40px, 1.6rem);
+  }
 }
 
 .redes-github {
-    @include m.tablet {
-        @include m.redes(37px, 37px, 1rem);
-    }
-    @include m.desktop {
-        @include m.redes(45px, 45px, 1.7rem);
-    }
+  @include m.tablet {
+    @include m.redes(36px, 36px, 1rem);
+  }
+  @include m.desktop {
+    @include m.redes(40px, 40px, 1.6rem);
+  }
 }
 
 .redes-behance {
-    @include m.tablet {
-        @include m.redes(37px, 37px, 1rem);
-    }
-    @include m.desktop {
-        @include m.redes(45px, 45px, 1.7rem);
-    }
+  @include m.tablet {
+    @include m.redes(36px, 36px, 1rem);
+  }
+  @include m.desktop {
+    @include m.redes(40px, 40px, 1.6rem);
+  }
 }
 
 .cont-footer {
-    @include m.tablet {
-        display: none;
-    }
+  @include m.tablet {
+    display: none;
+  }
 }
 
 // .cont-footer {
@@ -71,7 +74,7 @@
 //   justify-content: flex-end;
 //   flex-direction: column;
 //   align-items: flex-end;
-//   @include m.tablet {  
+//   @include m.tablet {
 //     display: none;
 //   }
 //   .cont-redes_cajas {

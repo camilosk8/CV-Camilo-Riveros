@@ -1,8 +1,6 @@
-// Look for .hamburger
-var hamburger = document.querySelector(".hamburger");
-// On click
-hamburger.addEventListener("click", function() {
-  // Toggle class "is-active"
-  hamburger.classList.toggle("is-active");
-  // Do something else, like open/close menu
-});
+// const hamburguesa = document.querySelector('.icono-hamburguesa');
+// const enlaces = document.querySelector('.contenedor-nav');
+
+// hamburguesa.addEventListener('click', () => {
+//     enlaces.classList.toggle('mostrar-menu');
+// }
