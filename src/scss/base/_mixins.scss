@@ -1,73 +1,92 @@
 @use "variables" as v;
 @mixin telefono() {
-    @media (min-width: v.$telefono) {
-        @content;
-    }
+  @media (min-width: v.$telefono) {
+    @content;
+  }
 }
 
 @mixin tablet() {
-    @media (min-width: v.$tablet) {
-        @content;
-    }
+  @media (min-width: v.$tablet) {
+    @content;
+  }
 }
 
 @mixin desktop() {
-    @media (min-width: v.$desktop) {
-        @content;
-    }
+  @media (min-width: v.$desktop) {
+    @content;
+  }
 }
 
 @mixin desktopXL() {
-    @media (min-width: v.$desktopXL) {
-        @content;
-    }
+  @media (min-width: v.$desktopXL) {
+    @content;
+  }
 }
 
 @mixin grid($columnas, $espaciado) {
-    display: grid;
-    grid-template-columns: repeat($columnas, 1fr);
-    gap: $espaciado;
+  display: grid;
+  grid-template-columns: repeat($columnas, 1fr);
+  gap: $espaciado;
 }
 
 @mixin redes($ancho, $alto, $texto) {
-    background-color: v.$rojo;
-    border-radius: 5px;
-    width: $ancho;
-    height: $alto;
-    margin-bottom: 20px;
+  background-color: v.$rojo;
+  border-radius: 5px;
+  width: $ancho;
+  height: $alto;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  img {
+    padding: 10px;
+    position: relative;
+  }
+  a {
+    opacity: 0;
+  }
+  &:hover {
+    width: 100%;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    flex-direction: row-reverse;
+    transition: all 0.5s;
     img {
-        padding: 10px;
-        position: relative;
+      transition: all 0.5s;
+      position: relative;
+      width: 39px;
+      height: 39px;
     }
     a {
-        opacity: 0;
+      padding: 7px;
+      transition: opacity 0.6s ease-in-out;
+      opacity: 1;
+      font-weight: 600;
+      font-size: $texto;
+      color: v.$blanco;
+      display: inline-block;
     }
-    &:hover {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row-reverse;
-        transition: all 0.5s;
-        img {
-            transition: all 0.5s;
-            position: relative;
-            width: 39px;
-            height: 39px;
-        }
-        a {
-            padding: 7px;
-            transition: opacity 0.6s ease-in-out;
-            opacity: 1;
-            font-weight: 600;
-            font-size: $texto;
-            color: v.$blanco;
-            display: inline-block;
-        }
-    }
+  }
+}
+
+@mixin redes-inferior($ancho, $alto) {
+  background-color: v.$rojo;
+  border-radius: 5px;
+  width: $ancho;
+  height: $alto;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  img {
+    padding: 10px;
+    position: relative;
+  }
+  // &:hover {
+  //   background-color: v.$rojo-opaco_oscuro;
+  // }
 }
 
 // @mixin fondos{
