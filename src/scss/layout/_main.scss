@@ -8,18 +8,20 @@
   background-color: v.$negro-opaco;
   border-radius: 10px;
   color: v.$blanco;
+  padding: 2.5rem;
   .contenedor-main_interno {
     display: flex;
     flex-direction: column;
   }
   p {
     margin: 0;
-    font-size: 1.8rem;
+    font-size: 1.73rem;
     font-weight: 500;
   }
   @include m.tablet {
+    width: 65%;
     display: block;
-    padding: 3.5rem;
+    padding: 3.2rem;
     p {
       font-size: 2rem;
       text-transform: uppercase;
@@ -28,18 +30,15 @@
   }
   @include m.desktop {
     p {
-      font-size: 2.2rem;
+      font-size: 2.1rem;
       text-transform: uppercase;
     }
   }
   @include m.desktopXL {
     padding: 4rem;
     p {
-      font-size: 2.9rem;
+      font-size: 2.6rem;
       text-transform: uppercase;
     }
-  }
-  @include m.tablet {
-    width: 65%;
   }
 }

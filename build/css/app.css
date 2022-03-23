@@ -12,7 +12,7 @@ html {
 
 body {
   font-family: "Oswald";
-  position: absolute;
+  position: fixed;
   height: 100vh;
   overflow: hidden;
 }
@@ -415,8 +415,8 @@ template {
   display: none;
   flex-direction: column;
   justify-content: space-between;
-  padding: 0 3rem 0 3rem;
-  background-color: #000000ce;
+  padding: 7rem 3rem 0 3rem;
+  background-color: #000000ee;
 }
 @media (min-width: 768px) {
   .contenedor-nav {
@@ -429,6 +429,56 @@ template {
     height: 100%;
     background-color: transparent;
   }
+}
+
+.activado {
+  display: flex;
+  animation: mostrar-menu 450ms ease-in-out both;
+  background-image: url("../build/img/icono-cerrar.svg");
+}
+@keyframes mostrar-menu {
+  from {
+    opacity: 0;
+    transform: translatey(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translatey(0);
+  }
+}
+
+.hamburguesa {
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: start;
+  margin: 25px 0 25px 0;
+  padding: 30px;
+}
+.hamburguesa .icono-hamburguesa {
+  display: flex;
+  position: fixed;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 20px;
+  height: 20px;
+}
+.hamburguesa .icono-hamburguesa img {
+  width: 40px;
+  height: 40px;
+}
+@media (min-width: 768px) {
+  .hamburguesa {
+    display: none;
+  }
+}
+
+.cerrar-ham {
+  display: none;
 }
 
 .contenedor-nav_menu {
@@ -473,17 +523,11 @@ template {
     height: 30px;
     margin: 0;
   }
-  .contenedor-nav_menu .nav-menu li:hover {
-    background-color: transparent;
-  }
   .contenedor-nav_menu .nav-menu li a:hover {
     color: #eb282b;
     cursor: pointer;
   }
   .contenedor-nav_menu .icono-hamburguesa {
-    display: none;
-  }
-  .contenedor-nav_menu .icono-nav {
     display: none;
   }
 }
@@ -505,35 +549,6 @@ template {
   .contenedor-nav_menu .nav-menu li:hover {
     color: #eb282b;
     cursor: pointer;
-  }
-}
-
-.hamburguesa {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  display: flex;
-  flex-direction: row;
-  justify-content: end;
-  align-items: start;
-  margin: 25px 0 25px 0;
-  padding: 30px;
-}
-.hamburguesa .icono-hamburguesa {
-  display: flex;
-  position: fixed;
-  flex-direction: row;
-  justify-content: flex-end;
-  width: 20px;
-  height: 20px;
-}
-.hamburguesa .icono-hamburguesa img {
-  width: 40px;
-  height: 40px;
-}
-@media (min-width: 768px) {
-  .hamburguesa {
-    display: none;
   }
 }
 
@@ -609,6 +624,7 @@ template {
   background-color: #00000078;
   border-radius: 10px;
   color: #fff;
+  padding: 2.5rem;
 }
 .contenedor-main .contenedor-main_interno {
   display: flex;
@@ -616,13 +632,14 @@ template {
 }
 .contenedor-main p {
   margin: 0;
-  font-size: 1.8rem;
+  font-size: 1.73rem;
   font-weight: 500;
 }
 @media (min-width: 768px) {
   .contenedor-main {
+    width: 65%;
     display: block;
-    padding: 3.5rem;
+    padding: 3.2rem;
   }
   .contenedor-main p {
     font-size: 2rem;
@@ -632,7 +649,7 @@ template {
 }
 @media (min-width: 992px) {
   .contenedor-main p {
-    font-size: 2.2rem;
+    font-size: 2.1rem;
     text-transform: uppercase;
   }
 }
@@ -641,13 +658,8 @@ template {
     padding: 4rem;
   }
   .contenedor-main p {
-    font-size: 2.9rem;
+    font-size: 2.6rem;
     text-transform: uppercase;
-  }
-}
-@media (min-width: 768px) {
-  .contenedor-main {
-    width: 65%;
   }
 }
 
@@ -1073,4 +1085,89 @@ template {
   position: absolute;
   background-size: cover;
   background-image: url("../../img/fondo-montana.png");
+}
+
+.cont-redes {
+  width: 100%;
+  height: 100px;
+  bottom: 38px;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .cont-redes {
+    display: none;
+  }
+}
+.cont-redes .cont-redes_cajas {
+  width: 90%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.cont-redes .cont-redes_cajas .cont_redes-telefono {
+  background-color: #eb282b;
+  border-radius: 5px;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.cont-redes .cont-redes_cajas .cont_redes-telefono img {
+  padding: 10px;
+  position: relative;
+}
+.cont-redes .cont-redes_cajas .cont_redes-correo {
+  background-color: #eb282b;
+  border-radius: 5px;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.cont-redes .cont-redes_cajas .cont_redes-correo img {
+  padding: 10px;
+  position: relative;
+}
+.cont-redes .cont-redes_cajas .cont_redes-behance {
+  background-color: #eb282b;
+  border-radius: 5px;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.cont-redes .cont-redes_cajas .cont_redes-behance img {
+  padding: 10px;
+  position: relative;
+}
+.cont-redes .cont-redes_cajas .cont_redes-github {
+  background-color: #eb282b;
+  border-radius: 5px;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.cont-redes .cont-redes_cajas .cont_redes-github img {
+  padding: 10px;
+  position: relative;
 }
