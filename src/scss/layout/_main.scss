@@ -3,6 +3,8 @@
 .contenedor-main {
   width: 90%;
   padding: 3rem;
+  position: relative;
+  top: -35px;
   margin: 2rem;
   max-height: 90%;
   background-color: v.$negro-opaco;
@@ -15,10 +17,11 @@
   }
   p {
     margin: 0;
-    font-size: 1.73rem;
+    font-size: 1.7rem;
     font-weight: 500;
   }
   @include m.tablet {
+    top: 0;
     width: 65%;
     display: block;
     padding: 3.2rem;
