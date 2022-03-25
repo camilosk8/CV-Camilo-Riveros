@@ -738,16 +738,52 @@ template {
   width: 100%;
   height: auto;
   display: flex;
+  justify-content: space-between;
 }
 
 .habilidades-logos {
-  width: 30px;
+  width: 25%;
+  display: flex;
+  flex-direction: row;
+}
+.habilidades-logos .habilidades-iconos {
+  width: 25px;
+  justify-content: space-between;
+}
+.habilidades-logos .habilidades-iconos img {
+  margin-right: 10px;
+}
+.habilidades-logos .habilidades-progress {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-around;
 }
-.habilidades-logos img {
-  padding-top: 10px;
+.habilidades-logos .habilidades-progress .circulo-progress {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin: auto;
+  background-color: #eb282b;
+  background: linear-gradient(0deg, #eb282b 50%, rgba(0, 0, 0, 0.2) 50%);
+  position: relative;
+}
+.habilidades-logos .habilidades-progress .circulo-progress:before {
+  content: "";
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #000000 content-box;
+  border-radius: 50%;
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+
+.habilidades-texto p {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
 }
 
 .contenedor-redes {

@@ -97,14 +97,53 @@
   width: 100%;
   height: auto;
   display: flex;
+  justify-content: space-between;
 }
 
 .habilidades-logos {
-  width: 30px;
+  width: 25%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  img {
-    padding-top: 10px;
+  flex-direction: row;
+
+  .habilidades-iconos {
+    width: 25px;
+    justify-content: space-between;
+    img {
+      margin-right: 10px;
+    }
+  }
+  .habilidades-progress {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    .circulo-progress {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      margin: auto;
+      background-color: v.$rojo;
+      background: linear-gradient(0deg, v.$rojo 50%, rgba(v.$negro, 0.2) 50%);
+      position: relative;
+      &:before {
+        content: "";
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: v.$negro content-box;
+        border-radius: 50%;
+        padding: 0.5rem;
+        box-sizing: border-box;
+      }
+    }
+  }
+}
+
+.habilidades-texto {
+  p {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
   }
 }
