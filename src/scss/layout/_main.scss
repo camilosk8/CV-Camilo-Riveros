@@ -24,7 +24,7 @@
   }
   h2 {
     font-size: 2.8rem;
-    padding: 8px;
+    padding: 3px;
   }
   @include m.tablet {
     top: 0;
@@ -52,35 +52,63 @@
   }
 }
 
+.perfil {
+  display: flex;
+  img {
+    position: relative;
+    margin-top: 5px;
+    width: 40px;
+    height: 40px;
+  }
+  h2 {
+    margin-left: 20px;
+    position: relative;
+  }
+}
+
 .contenedor-main_img {
   top: -33px;
-  width: 90%;
+  width: 60%;
   height: 100vh;
-  padding: 0 2.5rem 0 2.5rem;
+  padding: 1rem 2.5rem 1rem 2.5rem;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   .main-img1 {
-    margin: 1.5rem;
-    width: 180px;
-    height: 100%;
+    @include m.foto-inicio(1.5rem, 200px, 100%, bottom);
     background-image: url(../../../img/inicio-foto-solo.png);
-    display: flex;
-    position: relative;
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: contain;
   }
   .main-img2 {
-    @include m.foto-inicio(1.5rem, 230px, 100%, url(../../../img/inicio-texto-foto.svg)) {}
+    @include m.foto-inicio(1.5rem, 200px, 100%, top);
+    background-image: url(../../../img/inicio-texto-foto.svg);
+  }
+  @include m.tablet {
+    width: 70%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+
+    .main-img1 {
+      @include m.foto-inicio(1.5rem, 230px, 100%, right center);
+    }
+    .main-img2 {
+      @include m.foto-inicio(1.5rem, 230px, 100%, left center);
+    }
+  }
+  @include m.desktop {
+    top: 0;
+  }
+  @include m.desktopXL {
+    width: 50%;
+    top: 0;
   }
 }
 
 .contenedor-habilidades {
   width: 100%;
   height: auto;
-  display: flex;
+  display: flex; //quede aqui
   justify-content: space-between;
 }
 

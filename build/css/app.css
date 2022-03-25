@@ -567,20 +567,6 @@ template {
   }
 }
 
-.perfil {
-  display: flex;
-}
-.perfil img {
-  position: relative;
-  margin-top: 5px;
-  width: 40px;
-  height: 40px;
-}
-.perfil h2 {
-  margin-left: 20px;
-  position: relative;
-}
-
 .contenedor-saludo {
   display: none;
 }
@@ -656,7 +642,7 @@ template {
 }
 .contenedor-main h2 {
   font-size: 2.8rem;
-  padding: 8px;
+  padding: 3px;
 }
 @media (min-width: 768px) {
   .contenedor-main {
@@ -687,11 +673,25 @@ template {
   }
 }
 
+.perfil {
+  display: flex;
+}
+.perfil img {
+  position: relative;
+  margin-top: 5px;
+  width: 40px;
+  height: 40px;
+}
+.perfil h2 {
+  margin-left: 20px;
+  position: relative;
+}
+
 .contenedor-main_img {
   top: -33px;
-  width: 90%;
+  width: 60%;
   height: 100vh;
-  padding: 0 2.5rem 0 2.5rem;
+  padding: 1rem 2.5rem 1rem 2.5rem;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -699,25 +699,64 @@ template {
 }
 .contenedor-main_img .main-img1 {
   margin: 1.5rem;
-  width: 180px;
+  width: 200px;
   height: 100%;
-  background-image: url(../../../img/inicio-foto-solo.png);
   display: flex;
   position: relative;
-  background-position: bottom;
   background-repeat: no-repeat;
   background-size: contain;
+  background-position: bottom;
+  background-image: url(../../../img/inicio-foto-solo.png);
 }
 .contenedor-main_img .main-img2 {
   margin: 1.5rem;
-  width: 230px;
+  width: 200px;
   height: 100%;
-  background-image: url(../../../img/inicio-texto-foto.svg);
   display: flex;
   position: relative;
-  background-position: top;
   background-repeat: no-repeat;
   background-size: contain;
+  background-position: top;
+  background-image: url(../../../img/inicio-texto-foto.svg);
+}
+@media (min-width: 768px) {
+  .contenedor-main_img {
+    width: 70%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .contenedor-main_img .main-img1 {
+    margin: 1.5rem;
+    width: 230px;
+    height: 100%;
+    display: flex;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right center;
+  }
+  .contenedor-main_img .main-img2 {
+    margin: 1.5rem;
+    width: 230px;
+    height: 100%;
+    display: flex;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left center;
+  }
+}
+@media (min-width: 992px) {
+  .contenedor-main_img {
+    top: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .contenedor-main_img {
+    width: 50%;
+    top: 0;
+  }
 }
 
 .contenedor-habilidades {
