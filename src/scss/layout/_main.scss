@@ -8,6 +8,8 @@
   margin: 2rem;
   max-height: 90%;
   background-color: v.$negro-opaco;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
   border-radius: 10px;
   color: v.$blanco;
   padding: 2.5rem;
@@ -19,6 +21,10 @@
     margin: 0;
     font-size: 1.7rem;
     font-weight: 500;
+  }
+  h2 {
+    font-size: 2.8rem;
+    padding: 8px;
   }
   @include m.tablet {
     top: 0;
@@ -43,5 +49,101 @@
       font-size: 2.6rem;
       text-transform: uppercase;
     }
+  }
+}
+
+.contenedor-main_img {
+  top: -33px;
+  width: 90%;
+  height: 100vh;
+  padding: 0 2.5rem 0 2.5rem;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .main-img {
+    width: 230px;
+    height: 100%;
+    background-image: url(../../../img/inicio-foto-vertical.png);
+    display: flex;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    @include m.tablet {
+      height: 100%;
+      background-image: url(../../../img/inicio-foto.png);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  @include m.tablet {
+    position: relative;
+    height: 100%;
+    .main-img {
+      width: 90%;
+    }
+  }
+  @include m.desktop {
+    position: relative;
+    height: 100%;
+    .main-img {
+      width: 65%;
+    }
+  }
+}
+
+.contenedor-habilidades {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.habilidades-logos {
+  width: 25%;
+  display: flex;
+  flex-direction: row;
+
+  .habilidades-iconos {
+    width: 25px;
+    justify-content: space-between;
+    img {
+      margin-right: 10px;
+    }
+  }
+  .habilidades-progress {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    .circulo-progress {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      margin: auto;
+      background-color: v.$rojo;
+      background: linear-gradient(0deg, v.$rojo 50%, rgba(v.$negro, 0.2) 50%);
+      position: relative;
+      &:before {
+        content: "";
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: v.$negro content-box;
+        border-radius: 50%;
+        padding: 0.5rem;
+        box-sizing: border-box;
+      }
+    }
+  }
+}
+
+.habilidades-texto {
+  p {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
   }
 }

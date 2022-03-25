@@ -639,6 +639,8 @@ template {
   margin: 2rem;
   max-height: 90%;
   background-color: #00000078;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
   border-radius: 10px;
   color: #fff;
   padding: 2.5rem;
@@ -651,6 +653,10 @@ template {
   margin: 0;
   font-size: 1.7rem;
   font-weight: 500;
+}
+.contenedor-main h2 {
+  font-size: 2.8rem;
+  padding: 8px;
 }
 @media (min-width: 768px) {
   .contenedor-main {
@@ -679,6 +685,105 @@ template {
     font-size: 2.6rem;
     text-transform: uppercase;
   }
+}
+
+.contenedor-main_img {
+  top: -33px;
+  width: 90%;
+  height: 100vh;
+  padding: 0 2.5rem 0 2.5rem;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contenedor-main_img .main-img {
+  width: 230px;
+  height: 100%;
+  background-image: url(../../../img/inicio-foto-vertical.png);
+  display: flex;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+@media (min-width: 768px) {
+  .contenedor-main_img .main-img {
+    height: 100%;
+    background-image: url(../../../img/inicio-foto.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (min-width: 768px) {
+  .contenedor-main_img {
+    position: relative;
+    height: 100%;
+  }
+  .contenedor-main_img .main-img {
+    width: 90%;
+  }
+}
+@media (min-width: 992px) {
+  .contenedor-main_img {
+    position: relative;
+    height: 100%;
+  }
+  .contenedor-main_img .main-img {
+    width: 65%;
+  }
+}
+
+.contenedor-habilidades {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.habilidades-logos {
+  width: 25%;
+  display: flex;
+  flex-direction: row;
+}
+.habilidades-logos .habilidades-iconos {
+  width: 25px;
+  justify-content: space-between;
+}
+.habilidades-logos .habilidades-iconos img {
+  margin-right: 10px;
+}
+.habilidades-logos .habilidades-progress {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.habilidades-logos .habilidades-progress .circulo-progress {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin: auto;
+  background-color: #eb282b;
+  background: linear-gradient(0deg, #eb282b 50%, rgba(0, 0, 0, 0.2) 50%);
+  position: relative;
+}
+.habilidades-logos .habilidades-progress .circulo-progress:before {
+  content: "";
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #000000 content-box;
+  border-radius: 50%;
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+
+.habilidades-texto p {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
 }
 
 .contenedor-redes {
