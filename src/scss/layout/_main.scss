@@ -82,13 +82,13 @@
   .main-img2 {
     @include m.foto-inicio(1.5rem, 200px, 100%, top);
     background-image: url(../../img/inicio-texto-foto.svg);
-    filter: drop-shadow(-2px 2px 15px rgba(0, 0, 0, 9));
   }
   @include m.tablet {
     width: 70%;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+
     .main-img1 {
       @include m.foto-inicio(1.5rem, 230px, 100%, right center);
     }
@@ -104,14 +104,15 @@
     top: 0;
   }
 }
-//habilidades
+
 .contenedor-habilidades_uno {
   width: 100%;
   height: auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
-  margin-bottom: 1.2rem;
+
+  margin-bottom: 1.5rem;
 }
 .habilidades-logos {
   width: auto;
@@ -181,8 +182,8 @@
     background-color: v.$blanco;
   }
   p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 500;
-    line-height: 1.2;
+    line-height: 1.5;
   }
 }
