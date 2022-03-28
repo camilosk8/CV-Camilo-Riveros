@@ -718,6 +718,7 @@ template {
   background-size: contain;
   background-position: top;
   background-image: url(../../img/inicio-texto-foto.svg);
+  filter: drop-shadow(-2px 2px 15px black);
 }
 @media (min-width: 768px) {
   .contenedor-main_img {
@@ -765,7 +766,7 @@ template {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.2rem;
 }
 
 .habilidades-logos {
@@ -839,9 +840,9 @@ template {
   background-color: #fff;
 }
 .habilidades-skills p {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 500;
-  line-height: 1.5;
+  line-height: 1.2;
 }
 
 .contenedor-redes {
