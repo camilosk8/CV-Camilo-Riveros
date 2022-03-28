@@ -77,11 +77,11 @@
   align-items: center;
   .main-img1 {
     @include m.foto-inicio(1.5rem, 200px, 100%, bottom);
-    background-image: url(../../../img/inicio-foto-solo.png);
+    background-image: url(../../img/inicio-foto-solo.png);
   }
   .main-img2 {
     @include m.foto-inicio(1.5rem, 200px, 100%, top);
-    background-image: url(../../../img/inicio-texto-foto.svg);
+    background-image: url(../../img/inicio-texto-foto.svg);
   }
   @include m.tablet {
     width: 70%;

@@ -706,7 +706,7 @@ template {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: bottom;
-  background-image: url(../../../img/inicio-foto-solo.png);
+  background-image: url(../../img/inicio-foto-solo.png);
 }
 .contenedor-main_img .main-img2 {
   margin: 1.5rem;
@@ -717,7 +717,7 @@ template {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: top;
-  background-image: url(../../../img/inicio-texto-foto.svg);
+  background-image: url(../../img/inicio-texto-foto.svg);
 }
 @media (min-width: 768px) {
   .contenedor-main_img {
