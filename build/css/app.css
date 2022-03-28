@@ -567,20 +567,6 @@ template {
   }
 }
 
-.perfil {
-  display: flex;
-}
-.perfil img {
-  position: relative;
-  margin-top: 5px;
-  width: 40px;
-  height: 40px;
-}
-.perfil h2 {
-  margin-left: 20px;
-  position: relative;
-}
-
 .contenedor-saludo {
   display: none;
 }
@@ -656,7 +642,7 @@ template {
 }
 .contenedor-main h2 {
   font-size: 2.8rem;
-  padding: 8px;
+  padding: 3px;
 }
 @media (min-width: 768px) {
   .contenedor-main {
@@ -687,101 +673,173 @@ template {
   }
 }
 
+.perfil {
+  display: flex;
+}
+.perfil img {
+  position: relative;
+  margin-top: 5px;
+  width: 40px;
+  height: 40px;
+}
+.perfil h2 {
+  margin-left: 20px;
+  position: relative;
+}
+
 .contenedor-main_img {
   top: -33px;
-  width: 90%;
+  width: 60%;
   height: 100vh;
-  padding: 0 2.5rem 0 2.5rem;
-  position: absolute;
+  padding: 1rem 2.5rem 1rem 2.5rem;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.contenedor-main_img .main-img {
-  width: 230px;
+.contenedor-main_img .main-img1 {
+  margin: 1.5rem;
+  width: 200px;
   height: 100%;
-  background-image: url(../../../img/inicio-foto-vertical.png);
   display: flex;
-  background-position: center center;
+  position: relative;
   background-repeat: no-repeat;
   background-size: contain;
+  background-position: bottom;
+  background-image: url(../../../img/inicio-foto-solo.png);
 }
-@media (min-width: 768px) {
-  .contenedor-main_img .main-img {
-    height: 100%;
-    background-image: url(../../../img/inicio-foto.png);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.contenedor-main_img .main-img2 {
+  margin: 1.5rem;
+  width: 200px;
+  height: 100%;
+  display: flex;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
+  background-image: url(../../../img/inicio-texto-foto.svg);
 }
 @media (min-width: 768px) {
   .contenedor-main_img {
-    position: relative;
-    height: 100%;
+    width: 70%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
   }
-  .contenedor-main_img .main-img {
-    width: 90%;
+  .contenedor-main_img .main-img1 {
+    margin: 1.5rem;
+    width: 230px;
+    height: 100%;
+    display: flex;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right center;
+  }
+  .contenedor-main_img .main-img2 {
+    margin: 1.5rem;
+    width: 230px;
+    height: 100%;
+    display: flex;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left center;
   }
 }
 @media (min-width: 992px) {
   .contenedor-main_img {
-    position: relative;
-    height: 100%;
+    top: 0;
   }
-  .contenedor-main_img .main-img {
-    width: 65%;
+}
+@media (min-width: 1200px) {
+  .contenedor-main_img {
+    width: 50%;
+    top: 0;
   }
 }
 
-.contenedor-habilidades {
+.contenedor-habilidades_uno {
   width: 100%;
   height: auto;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  margin-bottom: 1.5rem;
 }
 
 .habilidades-logos {
-  width: 25%;
-  display: flex;
-  flex-direction: row;
+  width: auto;
+  height: 100%;
+  display: grid;
+  justify-content: center;
 }
 .habilidades-logos .habilidades-iconos {
-  width: 25px;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-row-gap: 0.8rem;
+  width: auto;
+  height: 10px;
+  justify-content: center;
 }
 .habilidades-logos .habilidades-iconos img {
-  margin-right: 10px;
+  width: 27px;
+  height: 27px;
 }
-.habilidades-logos .habilidades-progress {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+
+.habilidades-progress {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-row-gap: 0.8rem;
 }
-.habilidades-logos .habilidades-progress .circulo-progress {
-  width: 25px;
-  height: 25px;
+.habilidades-progress .circulo-progress {
+  width: 27px;
+  height: 27px;
   border-radius: 50%;
   margin: auto;
   background-color: #eb282b;
-  background: linear-gradient(0deg, #eb282b 50%, rgba(0, 0, 0, 0.2) 50%);
+  background: linear-gradient(45deg, #eb282b 50%, rgba(0, 0, 0, 0.2) 50%);
   position: relative;
 }
-.habilidades-logos .habilidades-progress .circulo-progress:before {
+.habilidades-progress .circulo-progress:before {
   content: "";
-  width: 25px;
-  height: 25px;
+  width: 27px;
+  height: 27px;
   position: absolute;
   top: 0;
   left: 0;
   background: #000000 content-box;
   border-radius: 50%;
-  padding: 0.5rem;
+  padding: 0.3rem;
   box-sizing: border-box;
 }
 
-.habilidades-texto p {
-  font-size: 1rem;
+.contenedor-habilidades_dos {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 2rem;
+}
+
+.habilidades-skills {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  align-items: center;
+  width: 100%;
+}
+.habilidades-skills .skills {
+  border-radius: 5px;
+  margin: 3px;
+  width: 100%;
+  height: 5px;
+  background-color: #fff;
+}
+.habilidades-skills p {
+  font-size: 1.3rem;
   font-weight: 500;
   line-height: 1.5;
 }

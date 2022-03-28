@@ -91,3 +91,13 @@
 
 // @mixin fondos{
 // }
+@mixin foto-inicio($margin, $ancho, $alto, $b-position) {
+  margin: $margin;
+  width: $ancho;
+  height: $alto;
+  display: flex;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: $b-position;
+}
