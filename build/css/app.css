@@ -759,29 +759,31 @@ template {
   }
 }
 
-.contenedor-habilidades {
+.contenedor-habilidades_uno {
   width: 100%;
   height: auto;
-  display: flex;
-  justify-content: space-between;
+  margin-bottom: 1.6rem;
 }
 
 .habilidades-logos {
-  width: 25%;
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  width: auto;
+  height: 100%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
 }
 .habilidades-logos .habilidades-iconos {
-  width: 25px;
-  justify-content: space-between;
+  display: grid;
+  width: auto;
+  grid-gap: 0.7rem;
 }
 .habilidades-logos .habilidades-iconos img {
-  margin-right: 10px;
+  height: 25px;
 }
 .habilidades-logos .habilidades-progress {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  display: grid;
+  width: auto;
+  grid-gap: 0.7rem;
 }
 .habilidades-logos .habilidades-progress .circulo-progress {
   width: 25px;
@@ -789,7 +791,7 @@ template {
   border-radius: 50%;
   margin: auto;
   background-color: #eb282b;
-  background: linear-gradient(0deg, #eb282b 50%, rgba(0, 0, 0, 0.2) 50%);
+  background: linear-gradient(0deg, #eb282b 100%, rgba(0, 0, 0, 0.2) 50%);
   position: relative;
 }
 .habilidades-logos .habilidades-progress .circulo-progress:before {
@@ -801,14 +803,33 @@ template {
   left: 0;
   background: #000000 content-box;
   border-radius: 50%;
-  padding: 0.5rem;
+  padding: 0.3rem;
   box-sizing: border-box;
 }
 
-.habilidades-texto p {
-  font-size: 1rem;
+.contenedor-habilidades_dos {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  margin-bottom: 1.2rem;
+}
+.contenedor-habilidades_dos .habilidades-texto p {
+  font-size: 1.6rem;
   font-weight: 500;
-  line-height: 1.5;
+  line-height: 2rem;
+}
+.contenedor-habilidades_dos .skills-barra {
+  height: 100%;
+  display: grid;
+  align-items: center;
+}
+.contenedor-habilidades_dos .skills-barra .progress {
+  background-color: #fff;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
 }
 
 .contenedor-redes {
