@@ -576,45 +576,46 @@ template {
     justify-content: center;
     width: 30%;
     height: 100vh;
-    color: #fff;
     overflow: hidden;
   }
-  .contenedor-saludo .contenedor-saludo_texto {
-    overflow: hidden;
-    display: inline-block;
-    height: fit-content;
-    transform: translateX(-4427.3px);
-    height: max-content;
-    width: 100px;
-    padding: 25px 0 25px 0;
-    background-color: #00000078;
-    backdrop-filter: blur(7px);
-    writing-mode: vertical-lr;
-    transform: rotate(180deg);
-    font-size: 70px;
-    font-weight: 600;
+}
+
+.contenedor-saludo_texto {
+  overflow: hidden;
+  display: inline-block;
+  height: fit-content;
+  transform: translateX(-4427.3px);
+  height: max-content;
+  width: 100px;
+  padding: 25px 0 25px 0;
+  background-color: #00000078;
+  backdrop-filter: blur(7px);
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  font-size: 65px;
+  font-weight: 600;
+}
+.contenedor-saludo_texto p {
+  color: #fff;
+  height: 100%;
+  display: block;
+  position: relative;
+  margin: 0;
+  animation-duration: 80s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-name: holaTexto;
+}
+@keyframes holaTexto {
+  0% {
+    top: 81.5%;
   }
-  .contenedor-saludo .contenedor-saludo_texto p {
-    height: 100%;
-    display: block;
-    position: relative;
-    margin: 0;
-    animation-duration: 80s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-name: holaTexto;
+  100% {
+    top: 0%;
   }
-  @keyframes holaTexto {
-    0% {
-      top: 81.5%;
-    }
-    100% {
-      top: 0%;
-    }
-  }
-  .contenedor-saludo .contenedor-saludo_texto p span {
-    color: #eb282b;
-  }
+}
+.contenedor-saludo_texto p span {
+  color: #eb282b;
 }
 
 .contenedor-main {
@@ -679,8 +680,8 @@ template {
 .perfil img {
   position: relative;
   margin-top: 5px;
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
 }
 .perfil h2 {
   margin-left: 20px;
@@ -706,7 +707,7 @@ template {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: bottom;
-  background-image: url("../../img/inicio-foto-solo.png");
+  background-image: url("../../img/inicio-foto-solo-.png");
   filter: drop-shadow(0px 10px 15px #000000);
 }
 .contenedor-main_img .main-img2 {
