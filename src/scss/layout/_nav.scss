@@ -24,7 +24,6 @@
 //iconos
 .activado {
   display: flex;
-  background-image: url("../build/img/icono-cerrar.svg");
   animation: mostrar-menu 450ms ease-in-out both;
   @keyframes mostrar-menu {
     from {

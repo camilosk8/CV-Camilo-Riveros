@@ -433,7 +433,6 @@ template {
 
 .activado {
   display: flex;
-  background-image: url("../build/img/icono-cerrar.svg");
   animation: mostrar-menu 450ms ease-in-out both;
 }
 @keyframes mostrar-menu {
@@ -762,10 +761,23 @@ template {
   }
 }
 
+@media (min-width: 768px) {
+  .contenedor-habilidades-caja {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+  }
+}
+
 .contenedor-habilidades_uno {
   width: 100%;
   height: auto;
   margin-bottom: 1.6rem;
+}
+@media (min-width: 768px) {
+  .contenedor-habilidades_uno {
+    width: 100%;
+  }
 }
 
 .habilidades-logos {
@@ -774,6 +786,7 @@ template {
   height: 100%;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
+  grid-gap: 1rem;
 }
 .habilidades-logos .habilidades-iconos {
   display: grid;
@@ -809,6 +822,48 @@ template {
   padding: 0.3rem;
   box-sizing: border-box;
 }
+@media (min-width: 768px) {
+  .habilidades-logos {
+    height: 100%;
+  }
+  .habilidades-logos .habilidades-iconos {
+    width: auto;
+    grid-gap: 0.7rem;
+    align-items: center;
+  }
+  .habilidades-logos .habilidades-iconos img {
+    height: 28px;
+  }
+  .habilidades-logos .habilidades-progress .circulo-progress {
+    width: 28px;
+    height: 28px;
+  }
+  .habilidades-logos .habilidades-progress .circulo-progress:before {
+    width: 28px;
+    height: 28px;
+  }
+}
+@media (min-width: 992px) {
+  .habilidades-logos {
+    height: 100%;
+  }
+  .habilidades-logos .habilidades-iconos {
+    width: auto;
+    grid-gap: 0.7rem;
+    align-items: center;
+  }
+  .habilidades-logos .habilidades-iconos img {
+    height: 32px;
+  }
+  .habilidades-logos .habilidades-progress .circulo-progress {
+    width: 32px;
+    height: 32px;
+  }
+  .habilidades-logos .habilidades-progress .circulo-progress:before {
+    width: 32px;
+    height: 32px;
+  }
+}
 
 .contenedor-habilidades_dos {
   width: 100%;
@@ -817,6 +872,7 @@ template {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   margin-bottom: 1.2rem;
+  grid-gap: 1rem;
 }
 .contenedor-habilidades_dos .habilidades-texto p {
   font-size: 1.6rem;
@@ -833,6 +889,24 @@ template {
   width: 100%;
   height: 4px;
   border-radius: 2px;
+}
+@media (min-width: 768px) {
+  .contenedor-habilidades_dos {
+    width: 100%;
+  }
+  .contenedor-habilidades_dos .habilidades-texto {
+    align-items: center;
+  }
+  .contenedor-habilidades_dos .habilidades-texto p {
+    font-size: 1.4rem;
+    line-height: 3rem;
+  }
+}
+@media (min-width: 992px) {
+  .contenedor-habilidades_dos .habilidades-texto p {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
 }
 
 .contenedor-redes {

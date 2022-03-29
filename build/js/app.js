@@ -1,7 +1,6 @@
 const hamburguesa = document.querySelector('.icono-hamburguesa');
 const enlaces = document.querySelector('.contenedor-nav');
 
-
 hamburguesa.addEventListener('click', () => {
   enlaces.classList.toggle('activado');
 });
@@ -16,5 +15,4 @@ function animateBars() {
   line1__bars.classList.toggle('activeline1__bars-menu');
   line2__bars.classList.toggle('activeline2__bars-menu');
   line3__bars.classList.toggle('activeline3__bars-menu');
-
 }
