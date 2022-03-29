@@ -77,23 +77,31 @@
   align-items: center;
   .main-img1 {
     @include m.foto-inicio(1.5rem, 200px, 100%, bottom);
-    background-image: url(../../../img/inicio-foto-solo.png);
+    background-image: url("../../img/inicio-foto-solo.png");
   }
   .main-img2 {
-    @include m.foto-inicio(1.5rem, 200px, 100%, top);
-    background-image: url(../../../img/inicio-texto-foto.svg);
+    @include m.foto-inicio(1.5rem,
+    200px,
+    100%,
+    top);
+    background-image: url("../../img/inicio-texto-foto.svg");
   }
   @include m.tablet {
     width: 70%;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-
     .main-img1 {
-      @include m.foto-inicio(1.5rem, 230px, 100%, right center);
+      @include m.foto-inicio(1.5rem,
+      230px,
+      100%,
+      right center);
     }
     .main-img2 {
-      @include m.foto-inicio(1.5rem, 230px, 100%, left center);
+      @include m.foto-inicio(1.5rem,
+      230px,
+      100%,
+      left center);
     }
   }
   @include m.desktop {
@@ -108,82 +116,74 @@
 .contenedor-habilidades_uno {
   width: 100%;
   height: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.6rem;
 }
+
 .habilidades-logos {
+  display: grid;
   width: auto;
   height: 100%;
-  display: grid;
-  justify-content: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
   .habilidades-iconos {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-row-gap: 0.8rem;
     width: auto;
-    height: 10px;
-    justify-content: center;
+    grid-gap: 0.7rem;
     img {
-      width: 27px;
-      height: 27px;
+      height: 25px;
     }
   }
-}
-.habilidades-progress {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-row-gap: 0.8rem;
-  .circulo-progress {
-    width: 27px;
-    height: 27px;
-    border-radius: 50%;
-    margin: auto;
-    background-color: v.$rojo;
-    background: linear-gradient(45deg, v.$rojo 50%, rgba(v.$negro, 0.2) 50%);
-    position: relative;
-    &:before {
-      content: "";
-      width: 27px;
-      height: 27px;
-      position: absolute;
-      top: 0;
-      left: 0;
-      background: v.$negro content-box;
+  .habilidades-progress {
+    display: grid;
+    width: auto;
+    grid-gap: 0.7rem;
+    .circulo-progress {
+      width: 25px;
+      height: 25px;
       border-radius: 50%;
-      padding: 0.3rem;
-      box-sizing: border-box;
+      margin: auto;
+      background-color: v.$rojo;
+      background: linear-gradient(0deg, v.$rojo 100%, rgba(v.$negro, 0.2) 50%);
+      position: relative;
+      &:before {
+        content: "";
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: v.$negro content-box;
+        border-radius: 50%;
+        padding: 0.3rem;
+        box-sizing: border-box;
+      }
     }
   }
 }
+
 .contenedor-habilidades_dos {
   width: 100%;
   height: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
-  grid-column-gap: 2rem;
-}
-
-.habilidades-skills {
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  align-items: center;
-  width: 100%;
-  .skills {
-    border-radius: 5px;
-    margin: 3px;
-    width: 100%;
-    height: 5px;
-    background-color: v.$blanco;
+  margin-bottom: 1.2rem;
+  .habilidades-texto {
+    p {
+      font-size: 1.6rem;
+      font-weight: 500;
+      line-height: 2rem;
+    }
   }
-  p {
-    font-size: 1.3rem;
-    font-weight: 500;
-    line-height: 1.5;
+  .skills-barra {
+    height: 100%;
+    display: grid;
+    align-items: center;
+    .progress {
+      background-color: v.$blanco;
+      width: 100%;
+      height: 4px;
+      border-radius: 2px;
+    }
   }
 }

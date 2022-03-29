@@ -706,7 +706,7 @@ template {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: bottom;
-  background-image: url(../../../img/inicio-foto-solo.png);
+  background-image: url(../../img/inicio-foto-solo.png);
 }
 .contenedor-main_img .main-img2 {
   margin: 1.5rem;
@@ -717,7 +717,7 @@ template {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: top;
-  background-image: url(../../../img/inicio-texto-foto.svg);
+  background-image: url(../../img/inicio-texto-foto.svg);
 }
 @media (min-width: 768px) {
   .contenedor-main_img {
@@ -762,51 +762,42 @@ template {
 .contenedor-habilidades_uno {
   width: 100%;
   height: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.6rem;
 }
 
 .habilidades-logos {
+  display: grid;
   width: auto;
   height: 100%;
-  display: grid;
-  justify-content: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
 }
 .habilidades-logos .habilidades-iconos {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-row-gap: 0.8rem;
   width: auto;
-  height: 10px;
-  justify-content: center;
+  grid-gap: 0.7rem;
 }
 .habilidades-logos .habilidades-iconos img {
-  width: 27px;
-  height: 27px;
+  height: 25px;
 }
-
-.habilidades-progress {
+.habilidades-logos .habilidades-progress {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-row-gap: 0.8rem;
+  width: auto;
+  grid-gap: 0.7rem;
 }
-.habilidades-progress .circulo-progress {
-  width: 27px;
-  height: 27px;
+.habilidades-logos .habilidades-progress .circulo-progress {
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
   margin: auto;
   background-color: #eb282b;
-  background: linear-gradient(45deg, #eb282b 50%, rgba(0, 0, 0, 0.2) 50%);
+  background: linear-gradient(0deg, #eb282b 100%, rgba(0, 0, 0, 0.2) 50%);
   position: relative;
 }
-.habilidades-progress .circulo-progress:before {
+.habilidades-logos .habilidades-progress .circulo-progress:before {
   content: "";
-  width: 27px;
-  height: 27px;
+  width: 25px;
+  height: 25px;
   position: absolute;
   top: 0;
   left: 0;
@@ -822,26 +813,23 @@ template {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
-  grid-column-gap: 2rem;
+  margin-bottom: 1.2rem;
 }
-
-.habilidades-skills {
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  align-items: center;
-  width: 100%;
-}
-.habilidades-skills .skills {
-  border-radius: 5px;
-  margin: 3px;
-  width: 100%;
-  height: 5px;
-  background-color: #fff;
-}
-.habilidades-skills p {
-  font-size: 1.3rem;
+.contenedor-habilidades_dos .habilidades-texto p {
+  font-size: 1.6rem;
   font-weight: 500;
-  line-height: 1.5;
+  line-height: 2rem;
+}
+.contenedor-habilidades_dos .skills-barra {
+  height: 100%;
+  display: grid;
+  align-items: center;
+}
+.contenedor-habilidades_dos .skills-barra .progress {
+  background-color: #fff;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
 }
 
 .contenedor-redes {
