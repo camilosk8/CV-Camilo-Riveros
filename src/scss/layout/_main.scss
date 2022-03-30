@@ -81,7 +81,10 @@
     filter: drop-shadow(0px 10px 15px v.$negro);
   }
   .main-img2 {
-    @include m.foto-inicio(1.5rem, 200px, 100%, top);
+    @include m.foto-inicio(1.5rem,
+    200px,
+    100%,
+    top);
     background-image: url("../../img/inicio-texto-foto.svg");
     filter: drop-shadow(0px 10px 15px v.$negro);
   }
@@ -91,10 +94,16 @@
     align-items: center;
     justify-content: space-evenly;
     .main-img1 {
-      @include m.foto-inicio(1.5rem, 230px, 100%, right center);
+      @include m.foto-inicio(1.5rem,
+      230px,
+      100%,
+      right center);
     }
     .main-img2 {
-      @include m.foto-inicio(1.5rem, 230px, 100%, left center);
+      @include m.foto-inicio(1.5rem,
+      230px,
+      100%,
+      left center);
     }
   }
   @include m.desktop {
@@ -105,8 +114,8 @@
     top: 0;
   }
 }
-//habilidades
 
+//habilidades-------------
 .contenedor-habilidades-caja {
   @include m.tablet {
     display: grid;
@@ -114,6 +123,7 @@
     grid-gap: 1rem;
   }
 }
+
 .contenedor-habilidades_uno {
   width: 100%;
   height: auto;
@@ -135,33 +145,7 @@
     width: auto;
     grid-gap: 0.7rem;
     img {
-      height: 25px;
-    }
-  }
-  .habilidades-progress {
-    display: grid;
-    width: auto;
-    grid-gap: 0.7rem;
-    .circulo-progress {
-      width: 25px;
-      height: 25px;
-      border-radius: 50%;
-      margin: auto;
-      background-color: v.$rojo;
-      background: linear-gradient(0deg, v.$rojo 100%, rgba(v.$negro, 0.2) 50%);
-      position: relative;
-      &:before {
-        content: "";
-        width: 25px;
-        height: 25px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background: v.$negro content-box;
-        border-radius: 50%;
-        padding: 0.3rem;
-        box-sizing: border-box;
-      }
+      height: 27px;
     }
   }
   @include m.tablet {
@@ -171,16 +155,16 @@
       grid-gap: 0.7rem;
       align-items: center;
       img {
-        height: 28px;
+        height: 29px;
       }
     }
     .habilidades-progress {
       .circulo-progress {
-        width: 28px;
-        height: 28px;
+        width: 29px;
+        height: 29px;
         &:before {
-          width: 28px;
-          height: 28px;
+          width: 29px;
+          height: 29px;
         }
       }
     }
@@ -202,6 +186,59 @@
         &:before {
           width: 32px;
           height: 32px;
+        }
+      }
+    }
+  }
+}
+
+@keyframes load {
+  0% {
+    stroke-dashoffset: 0
+  }
+}
+
+.habilidades-progress {
+  display: grid;
+  .progress-container {
+    position: relative;
+    display: grid;
+    justify-content: space-between;
+    grid-gap: 0.7rem;
+    .contenedor-textProgress {
+      display: block;
+      .text-progress {
+        height: 3rem;
+        width: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        color: v.$blanco;
+        font-weight: 500;
+        &:after {
+          content: attr(data-percent);
+          position: absolute;
+          font-size: 1rem;
+          align-items: center;
+        }
+      }
+      svg {
+        width: 3rem;
+        height: 3rem;
+        &:nth-child(2) {
+          stroke: v.$rojo;
+          position: relative;
+          left: 0;
+          top: 0;
+          transform: rotate(-90deg);
+        }
+        &:nth-child(2) path {
+          fill: none;
+          stroke-width: 25;
+          stroke-dasharray: 629;
+          opacity: .9;
+          animation: load 4s;
         }
       }
     }

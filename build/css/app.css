@@ -794,33 +794,7 @@ template {
   grid-gap: 0.7rem;
 }
 .habilidades-logos .habilidades-iconos img {
-  height: 25px;
-}
-.habilidades-logos .habilidades-progress {
-  display: grid;
-  width: auto;
-  grid-gap: 0.7rem;
-}
-.habilidades-logos .habilidades-progress .circulo-progress {
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  margin: auto;
-  background-color: #eb282b;
-  background: linear-gradient(0deg, #eb282b 100%, rgba(0, 0, 0, 0.2) 50%);
-  position: relative;
-}
-.habilidades-logos .habilidades-progress .circulo-progress:before {
-  content: "";
-  width: 25px;
-  height: 25px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: #000000 content-box;
-  border-radius: 50%;
-  padding: 0.3rem;
-  box-sizing: border-box;
+  height: 27px;
 }
 @media (min-width: 768px) {
   .habilidades-logos {
@@ -832,15 +806,15 @@ template {
     align-items: center;
   }
   .habilidades-logos .habilidades-iconos img {
-    height: 28px;
+    height: 29px;
   }
   .habilidades-logos .habilidades-progress .circulo-progress {
-    width: 28px;
-    height: 28px;
+    width: 29px;
+    height: 29px;
   }
   .habilidades-logos .habilidades-progress .circulo-progress:before {
-    width: 28px;
-    height: 28px;
+    width: 29px;
+    height: 29px;
   }
 }
 @media (min-width: 992px) {
@@ -863,6 +837,58 @@ template {
     width: 32px;
     height: 32px;
   }
+}
+
+@keyframes load {
+  0% {
+    stroke-dashoffset: 0;
+  }
+}
+.habilidades-progress {
+  display: grid;
+}
+.habilidades-progress .progress-container {
+  position: relative;
+  display: grid;
+  justify-content: space-between;
+  grid-gap: 0.7rem;
+}
+.habilidades-progress .progress-container .contenedor-textProgress {
+  display: block;
+}
+.habilidades-progress .progress-container .contenedor-textProgress .text-progress {
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  color: #fff;
+  font-weight: 500;
+}
+.habilidades-progress .progress-container .contenedor-textProgress .text-progress:after {
+  content: attr(data-percent);
+  position: absolute;
+  font-size: 1rem;
+  align-items: center;
+}
+.habilidades-progress .progress-container .contenedor-textProgress svg {
+  width: 3rem;
+  height: 3rem;
+}
+.habilidades-progress .progress-container .contenedor-textProgress svg:nth-child(2) {
+  stroke: #eb282b;
+  position: relative;
+  left: 0;
+  top: 0;
+  transform: rotate(-90deg);
+}
+.habilidades-progress .progress-container .contenedor-textProgress svg:nth-child(2) path {
+  fill: none;
+  stroke-width: 25;
+  stroke-dasharray: 629;
+  opacity: 0.9;
+  animation: load 4s;
 }
 
 .contenedor-habilidades_dos {
