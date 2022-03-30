@@ -898,6 +898,11 @@ template {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   margin-bottom: 1rem;
+  grid-gap: 2rem;
+}
+.contenedor-habilidades_dos .habilidades-texto {
+  margin: 0 auto;
+  width: 70%;
 }
 .contenedor-habilidades_dos .habilidades-texto p {
   font-size: 1.2rem;
@@ -905,6 +910,7 @@ template {
   line-height: 1.6rem;
 }
 .contenedor-habilidades_dos .skills-barra {
+  width: 75%;
   height: 100%;
   display: grid;
   align-items: center;
