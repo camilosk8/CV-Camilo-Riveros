@@ -127,7 +127,7 @@
 .contenedor-habilidades_uno {
   width: 100%;
   height: auto;
-  margin-bottom: 1.6rem;
+  margin-bottom: 1rem;
   @include m.tablet {
     width: 100%;
   }
@@ -204,7 +204,7 @@
     position: relative;
     display: grid;
     justify-content: space-between;
-    grid-gap: 0.7rem;
+    grid-gap: 0.5rem;
     .contenedor-textProgress {
       display: block;
       .text-progress {
@@ -251,13 +251,12 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
-  margin-bottom: 1.2rem;
-  grid-gap: 1rem;
+  margin-bottom: 1rem;
   .habilidades-texto {
     p {
-      font-size: 1.6rem;
+      font-size: 1.2rem;
       font-weight: 500;
-      line-height: 2rem;
+      line-height: 1.6rem;
     }
   }
   .skills-barra {

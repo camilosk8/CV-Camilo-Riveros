@@ -772,7 +772,7 @@ template {
 .contenedor-habilidades_uno {
   width: 100%;
   height: auto;
-  margin-bottom: 1.6rem;
+  margin-bottom: 1rem;
 }
 @media (min-width: 768px) {
   .contenedor-habilidades_uno {
@@ -851,7 +851,7 @@ template {
   position: relative;
   display: grid;
   justify-content: space-between;
-  grid-gap: 0.7rem;
+  grid-gap: 0.5rem;
 }
 .habilidades-progress .progress-container .contenedor-textProgress {
   display: block;
@@ -897,13 +897,12 @@ template {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
-  margin-bottom: 1.2rem;
-  grid-gap: 1rem;
+  margin-bottom: 1rem;
 }
 .contenedor-habilidades_dos .habilidades-texto p {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   font-weight: 500;
-  line-height: 2rem;
+  line-height: 1.6rem;
 }
 .contenedor-habilidades_dos .skills-barra {
   height: 100%;
