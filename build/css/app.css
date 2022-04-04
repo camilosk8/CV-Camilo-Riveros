@@ -776,13 +776,18 @@ template {
 }
 @media (min-width: 768px) {
   .contenedor-habilidades_uno {
-    width: 100%;
+    width: 90%;
+  }
+}
+@media (min-width: 992px) {
+  .contenedor-habilidades_uno {
+    width: 95%;
   }
 }
 
 .habilidades-logos {
   display: grid;
-  width: auto;
+  width: 100%;
   height: 100%;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
@@ -799,22 +804,15 @@ template {
 @media (min-width: 768px) {
   .habilidades-logos {
     height: 100%;
+    grid-gap: 1rem;
   }
   .habilidades-logos .habilidades-iconos {
-    width: auto;
-    grid-gap: 0.7rem;
+    width: 35px;
+    grid-gap: 1rem;
     align-items: center;
   }
   .habilidades-logos .habilidades-iconos img {
-    height: 29px;
-  }
-  .habilidades-logos .habilidades-progress .circulo-progress {
-    width: 29px;
-    height: 29px;
-  }
-  .habilidades-logos .habilidades-progress .circulo-progress:before {
-    width: 29px;
-    height: 29px;
+    height: 34px;
   }
 }
 @media (min-width: 992px) {
@@ -822,20 +820,12 @@ template {
     height: 100%;
   }
   .habilidades-logos .habilidades-iconos {
-    width: auto;
-    grid-gap: 0.7rem;
+    width: 45px;
+    grid-gap: 1.5rem;
     align-items: center;
   }
   .habilidades-logos .habilidades-iconos img {
-    height: 32px;
-  }
-  .habilidades-logos .habilidades-progress .circulo-progress {
-    width: 32px;
-    height: 32px;
-  }
-  .habilidades-logos .habilidades-progress .circulo-progress:before {
-    width: 32px;
-    height: 32px;
+    height: 45px;
   }
 }
 
@@ -851,7 +841,8 @@ template {
   position: relative;
   display: grid;
   justify-content: space-between;
-  grid-gap: 0.5rem;
+  grid-gap: 0.7rem;
+  align-items: center;
 }
 .habilidades-progress .progress-container .contenedor-textProgress {
   display: block;
@@ -890,53 +881,171 @@ template {
   opacity: 0.9;
   animation: load 4s;
 }
+@media (min-width: 768px) {
+  .habilidades-progress .progress-container {
+    position: relative;
+    justify-content: space-between;
+    grid-gap: 1rem;
+    align-items: center;
+  }
+  .habilidades-progress .progress-container .contenedor-textProgress .text-progress {
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+  }
+  .habilidades-progress .progress-container .contenedor-textProgress svg {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  .habilidades-progress .progress-container .contenedor-textProgress svg:nth-child(2) {
+    stroke: #eb282b;
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: rotate(-90deg);
+  }
+}
+@media (min-width: 992px) {
+  .habilidades-progress .progress-container {
+    position: relative;
+    justify-content: space-between;
+    grid-gap: 1.5rem;
+    align-items: center;
+  }
+  .habilidades-progress .progress-container .contenedor-textProgress .text-progress {
+    width: 4.5rem;
+    height: 4.5rem;
+    font-size: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+  }
+  .habilidades-progress .progress-container .contenedor-textProgress svg {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+  .habilidades-progress .progress-container .contenedor-textProgress svg:nth-child(2) {
+    stroke: #eb282b;
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: rotate(-90deg);
+  }
+}
 
 .contenedor-habilidades_dos {
   width: 100%;
-  height: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   margin-bottom: 1rem;
-  grid-gap: 2rem;
+  grid-gap: 1rem;
+  height: 100%;
 }
 .contenedor-habilidades_dos .habilidades-texto {
+  display: grid;
   margin: 0 auto;
   width: 70%;
+  height: 100%;
 }
 .contenedor-habilidades_dos .habilidades-texto p {
   font-size: 1.2rem;
   font-weight: 500;
   line-height: 1.6rem;
 }
-.contenedor-habilidades_dos .skills-barra {
-  width: 75%;
+.contenedor-habilidades_dos .habilidades-skills .skills-barras {
+  width: 80%;
   height: 100%;
   display: grid;
   align-items: center;
 }
-.contenedor-habilidades_dos .skills-barra .progress {
+.contenedor-habilidades_dos .habilidades-skills .skills-barras .barra {
   background-color: #fff;
-  width: 100%;
+  width: 90%;
   height: 4px;
   border-radius: 2px;
+  position: relative;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+.contenedor-habilidades_dos .habilidades-skills .skills-barras .barra .progress {
+  width: var(--w);
+  height: 4px;
+  background-color: #eb282b;
+  border-radius: 2px;
+  animation: carga 3s ease;
+}
+@keyframes carga {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: var(--w);
+  }
 }
 @media (min-width: 768px) {
-  .contenedor-habilidades_dos {
-    width: 100%;
-  }
   .contenedor-habilidades_dos .habilidades-texto {
-    align-items: center;
+    margin: 0;
   }
   .contenedor-habilidades_dos .habilidades-texto p {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     line-height: 3rem;
+  }
+  .contenedor-habilidades_dos .habilidades-skills .skills-barras {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-items: center;
+  }
+  .contenedor-habilidades_dos .habilidades-skills .skills-barras .barra {
+    width: 100%;
+    width: 90%;
+    height: 6px;
+    border-radius: 2px;
+  }
+  .contenedor-habilidades_dos .habilidades-skills .skills-barras .barra .progress {
+    height: 6px;
+  }
+  .contenedor-habilidades_dos .habilidades-skills .skills-barras .progress {
+    background-color: #fff;
+    width: 100%;
+    height: 8px;
+    border-radius: 4px;
   }
 }
 @media (min-width: 992px) {
+  .contenedor-habilidades_dos .habilidades-texto {
+    margin: 0;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+  }
   .contenedor-habilidades_dos .habilidades-texto p {
     font-size: 2rem;
     line-height: 3rem;
+  }
+  .contenedor-habilidades_dos .habilidades-skills .skills-barras {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-items: center;
+  }
+  .contenedor-habilidades_dos .habilidades-skills .skills-barras .barra {
+    width: 100%;
+    width: 90%;
+    height: 8px;
+    border-radius: 2px;
+  }
+  .contenedor-habilidades_dos .habilidades-skills .skills-barras .barra .progress {
+    height: 8px;
+  }
+  .contenedor-habilidades_dos .habilidades-skills .skills-barras .progress {
+    background-color: #fff;
+    width: 100%;
+    height: 10px;
+    border-radius: 4px;
   }
 }
 
