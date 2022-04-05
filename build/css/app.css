@@ -761,294 +761,6 @@ template {
   }
 }
 
-@media (min-width: 768px) {
-  .contenedor-habilidades-caja {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 1rem;
-  }
-}
-
-.contenedor-habilidades_uno {
-  width: 100%;
-  height: auto;
-  margin-bottom: 1rem;
-}
-@media (min-width: 768px) {
-  .contenedor-habilidades_uno {
-    width: 90%;
-  }
-}
-@media (min-width: 992px) {
-  .contenedor-habilidades_uno {
-    width: 95%;
-  }
-}
-
-.habilidades-logos {
-  display: grid;
-  width: 100%;
-  height: 100%;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  grid-gap: 1rem;
-}
-.habilidades-logos .habilidades-iconos {
-  display: grid;
-  width: auto;
-  grid-gap: 0.7rem;
-}
-.habilidades-logos .habilidades-iconos img {
-  height: 27px;
-}
-@media (min-width: 768px) {
-  .habilidades-logos {
-    height: 100%;
-    grid-gap: 1rem;
-  }
-  .habilidades-logos .habilidades-iconos {
-    width: 35px;
-    grid-gap: 1rem;
-    align-items: center;
-  }
-  .habilidades-logos .habilidades-iconos img {
-    height: 34px;
-  }
-}
-@media (min-width: 992px) {
-  .habilidades-logos {
-    height: 100%;
-  }
-  .habilidades-logos .habilidades-iconos {
-    width: 45px;
-    grid-gap: 1.5rem;
-    align-items: center;
-  }
-  .habilidades-logos .habilidades-iconos img {
-    height: 45px;
-  }
-}
-
-@keyframes load {
-  0% {
-    stroke-dashoffset: 0;
-  }
-}
-.habilidades-progress {
-  display: grid;
-}
-.habilidades-progress .progress-container {
-  position: relative;
-  display: grid;
-  justify-content: space-between;
-  grid-gap: 0.7rem;
-  align-items: center;
-}
-.habilidades-progress .progress-container .contenedor-textProgress {
-  display: block;
-}
-.habilidades-progress .progress-container .contenedor-textProgress .text-progress {
-  height: 3rem;
-  width: 3rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  color: #fff;
-  font-weight: 500;
-}
-.habilidades-progress .progress-container .contenedor-textProgress .text-progress:after {
-  content: attr(data-percent);
-  position: absolute;
-  font-size: 1rem;
-  align-items: center;
-}
-.habilidades-progress .progress-container .contenedor-textProgress svg {
-  width: 3rem;
-  height: 3rem;
-}
-.habilidades-progress .progress-container .contenedor-textProgress svg:nth-child(2) {
-  stroke: #eb282b;
-  position: relative;
-  left: 0;
-  top: 0;
-  transform: rotate(-90deg);
-}
-.habilidades-progress .progress-container .contenedor-textProgress svg:nth-child(2) path {
-  fill: none;
-  stroke-width: 25;
-  stroke-dasharray: 629;
-  opacity: 0.9;
-  animation: load 4s;
-}
-@media (min-width: 768px) {
-  .habilidades-progress .progress-container {
-    position: relative;
-    justify-content: space-between;
-    grid-gap: 1rem;
-    align-items: center;
-  }
-  .habilidades-progress .progress-container .contenedor-textProgress .text-progress {
-    width: 3.5rem;
-    height: 3.5rem;
-    font-size: 1.5rem;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-  }
-  .habilidades-progress .progress-container .contenedor-textProgress svg {
-    width: 3.5rem;
-    height: 3.5rem;
-  }
-  .habilidades-progress .progress-container .contenedor-textProgress svg:nth-child(2) {
-    stroke: #eb282b;
-    position: relative;
-    left: 0;
-    top: 0;
-    transform: rotate(-90deg);
-  }
-}
-@media (min-width: 992px) {
-  .habilidades-progress .progress-container {
-    position: relative;
-    justify-content: space-between;
-    grid-gap: 1.5rem;
-    align-items: center;
-  }
-  .habilidades-progress .progress-container .contenedor-textProgress .text-progress {
-    width: 4.5rem;
-    height: 4.5rem;
-    font-size: 1.5rem;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-  }
-  .habilidades-progress .progress-container .contenedor-textProgress svg {
-    width: 4.5rem;
-    height: 4.5rem;
-  }
-  .habilidades-progress .progress-container .contenedor-textProgress svg:nth-child(2) {
-    stroke: #eb282b;
-    position: relative;
-    left: 0;
-    top: 0;
-    transform: rotate(-90deg);
-  }
-}
-
-.contenedor-habilidades_dos {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  margin-bottom: 1rem;
-  grid-gap: 1rem;
-  height: 100%;
-}
-.contenedor-habilidades_dos .habilidades-texto {
-  display: grid;
-  margin: 0 auto;
-  width: 70%;
-  height: 100%;
-}
-.contenedor-habilidades_dos .habilidades-texto p {
-  font-size: 1.2rem;
-  font-weight: 500;
-  line-height: 1.6rem;
-}
-.contenedor-habilidades_dos .habilidades-skills .skills-barras {
-  width: 80%;
-  height: 100%;
-  display: grid;
-  align-items: center;
-}
-.contenedor-habilidades_dos .habilidades-skills .skills-barras .barra {
-  background-color: #fff;
-  width: 90%;
-  height: 4px;
-  border-radius: 2px;
-  position: relative;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
-}
-.contenedor-habilidades_dos .habilidades-skills .skills-barras .barra .progress {
-  width: var(--w);
-  height: 4px;
-  background-color: #eb282b;
-  border-radius: 2px;
-  animation: carga 3s ease;
-}
-@keyframes carga {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: var(--w);
-  }
-}
-@media (min-width: 768px) {
-  .contenedor-habilidades_dos .habilidades-texto {
-    margin: 0;
-  }
-  .contenedor-habilidades_dos .habilidades-texto p {
-    font-size: 1.6rem;
-    line-height: 3rem;
-  }
-  .contenedor-habilidades_dos .habilidades-skills .skills-barras {
-    width: 100%;
-    height: 100%;
-    display: grid;
-    align-items: center;
-  }
-  .contenedor-habilidades_dos .habilidades-skills .skills-barras .barra {
-    width: 100%;
-    width: 90%;
-    height: 6px;
-    border-radius: 2px;
-  }
-  .contenedor-habilidades_dos .habilidades-skills .skills-barras .barra .progress {
-    height: 6px;
-  }
-  .contenedor-habilidades_dos .habilidades-skills .skills-barras .progress {
-    background-color: #fff;
-    width: 100%;
-    height: 8px;
-    border-radius: 4px;
-  }
-}
-@media (min-width: 992px) {
-  .contenedor-habilidades_dos .habilidades-texto {
-    margin: 0;
-    justify-content: space-between;
-    height: 100%;
-    align-items: center;
-  }
-  .contenedor-habilidades_dos .habilidades-texto p {
-    font-size: 2rem;
-    line-height: 3rem;
-  }
-  .contenedor-habilidades_dos .habilidades-skills .skills-barras {
-    width: 100%;
-    height: 100%;
-    display: grid;
-    align-items: center;
-  }
-  .contenedor-habilidades_dos .habilidades-skills .skills-barras .barra {
-    width: 100%;
-    width: 90%;
-    height: 8px;
-    border-radius: 2px;
-  }
-  .contenedor-habilidades_dos .habilidades-skills .skills-barras .barra .progress {
-    height: 8px;
-  }
-  .contenedor-habilidades_dos .habilidades-skills .skills-barras .progress {
-    background-color: #fff;
-    width: 100%;
-    height: 10px;
-    border-radius: 4px;
-  }
-}
-
 .contenedor-redes {
   display: none;
 }
@@ -1476,7 +1188,7 @@ template {
 .cont-redes {
   width: 100%;
   height: 100px;
-  bottom: 28px;
+  bottom: 10px;
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -1556,4 +1268,335 @@ template {
 .cont-redes .cont-redes_cajas .cont_redes-github img {
   padding: 10px;
   position: relative;
+}
+
+@media (min-width: 768px) {
+  .contenedor-habilidades-caja {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+  }
+}
+
+.contenedor-habilidades_uno {
+  margin-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .contenedor-habilidades_uno {
+    width: 95%;
+  }
+}
+@media (min-width: 992px) {
+  .contenedor-habilidades_uno {
+    width: 100%;
+  }
+}
+
+.habilidades-logos {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 1rem;
+}
+.habilidades-logos .habilidades-iconos {
+  display: grid;
+  grid-gap: 0.7rem;
+}
+.habilidades-logos .habilidades-iconos img {
+  height: 27px;
+}
+@media (min-width: 768px) {
+  .habilidades-logos {
+    height: 100%;
+    grid-gap: 1rem;
+  }
+  .habilidades-logos .habilidades-iconos {
+    width: 35px;
+    grid-gap: 1rem;
+    align-items: center;
+  }
+  .habilidades-logos .habilidades-iconos img {
+    height: 34px;
+  }
+}
+@media (min-width: 992px) {
+  .habilidades-logos {
+    height: 100%;
+  }
+  .habilidades-logos .habilidades-iconos {
+    width: 45px;
+    grid-gap: 1.5rem;
+    align-items: center;
+  }
+  .habilidades-logos .habilidades-iconos img {
+    height: 45px;
+  }
+}
+
+@keyframes load {
+  0% {
+    stroke-dashoffset: 0;
+  }
+}
+.progress-container {
+  position: relative;
+  display: grid;
+  justify-content: space-between;
+  grid-gap: 0.7rem;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .progress-container {
+    position: relative;
+    justify-content: space-between;
+    grid-gap: 1rem;
+    align-items: center;
+  }
+  .progress-container .contenedor-textProgress .text-progress {
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+  }
+  .progress-container .contenedor-textProgress svg {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  .progress-container .contenedor-textProgress svg:nth-child(2) {
+    stroke: #eb282b;
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: rotate(-90deg);
+  }
+}
+@media (min-width: 992px) {
+  .progress-container {
+    position: relative;
+    justify-content: space-between;
+    grid-gap: 1.5rem;
+    align-items: center;
+  }
+  .progress-container .contenedor-textProgress .text-progress {
+    width: 4.5rem;
+    height: 4.5rem;
+    font-size: 2rem;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+  }
+  .progress-container .contenedor-textProgress .text-progress:after {
+    font-size: 1.5rem;
+  }
+  .progress-container .contenedor-textProgress svg {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+  .progress-container .contenedor-textProgress svg:nth-child(2) {
+    stroke: #eb282b;
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: rotate(-90deg);
+  }
+}
+
+.contenedor-textProgress {
+  display: block;
+}
+.contenedor-textProgress .text-progress {
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  color: #fff;
+  font-weight: 500;
+}
+.contenedor-textProgress .text-progress:after {
+  content: attr(data-percent);
+  position: absolute;
+  font-size: 1rem;
+  align-items: center;
+}
+.contenedor-textProgress svg {
+  width: 3rem;
+  height: 3rem;
+}
+.contenedor-textProgress svg:nth-child(2) {
+  stroke: #eb282b;
+  position: relative;
+  left: 0;
+  top: 0;
+  transform: rotate(-90deg);
+}
+.contenedor-textProgress svg:nth-child(2) path {
+  fill: none;
+  stroke-width: 25;
+  stroke-dasharray: 629;
+  opacity: 0.9;
+  animation: load 4s;
+}
+
+.contenedor-habilidades_dos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 1.2rem;
+}
+.contenedor-habilidades_dos .habilidades-texto {
+  display: grid;
+  margin: 0 auto;
+  width: 70%;
+}
+.contenedor-habilidades_dos .habilidades-texto p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.6rem;
+}
+@media (min-width: 768px) {
+  .contenedor-habilidades_dos .habilidades-texto {
+    margin: 0;
+  }
+  .contenedor-habilidades_dos .habilidades-texto p {
+    font-size: 1.6rem;
+    line-height: 3rem;
+  }
+  .contenedor-habilidades_dos .habilidades-skills .skills-barras {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-items: center;
+  }
+  .contenedor-habilidades_dos .habilidades-skills .skills-barras .barra {
+    width: 100%;
+    width: 90%;
+    height: 6px;
+    border-radius: 2px;
+  }
+  .contenedor-habilidades_dos .habilidades-skills .skills-barras .barra .progress {
+    height: 6px;
+  }
+  .contenedor-habilidades_dos .habilidades-skills .skills-barras .progress {
+    background-color: #fff;
+    width: 100%;
+    height: 8px;
+    border-radius: 4px;
+  }
+}
+@media (min-width: 992px) {
+  .contenedor-habilidades_dos .habilidades-texto {
+    margin: 0;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+  }
+  .contenedor-habilidades_dos .habilidades-texto p {
+    font-size: 2.4rem;
+    line-height: 3rem;
+  }
+  .contenedor-habilidades_dos .habilidades-skills .skills-barras {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-items: center;
+  }
+  .contenedor-habilidades_dos .habilidades-skills .skills-barras .barra {
+    width: 100%;
+    width: 90%;
+    height: 8px;
+    border-radius: 2px;
+  }
+  .contenedor-habilidades_dos .habilidades-skills .skills-barras .barra .progress {
+    height: 8px;
+  }
+  .contenedor-habilidades_dos .habilidades-skills .skills-barras .progress {
+    background-color: #fff;
+    width: 100%;
+    height: 10px;
+    border-radius: 4px;
+  }
+}
+
+.habilidades-skills .skills-barras {
+  width: 80%;
+  height: 100%;
+  display: grid;
+  align-items: center;
+}
+.habilidades-skills .skills-barras .barra {
+  background-color: #fff;
+  width: 90%;
+  height: 4px;
+  border-radius: 2px;
+  position: relative;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+.habilidades-skills .skills-barras .barra .progress {
+  width: var(--w);
+  height: 4px;
+  background-color: #eb282b;
+  border-radius: 2px;
+  animation: carga 3s ease;
+}
+@keyframes carga {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: var(--w);
+  }
+}
+
+.formacion-contenedor {
+  width: 100%;
+  position: relative;
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+
+.formacion-contenedor_step {
+  padding-top: 1rem;
+  display: grid;
+  justify-content: center;
+}
+.formacion-contenedor_step .circulo {
+  width: 12px;
+  height: 12px;
+  background-color: #eb282b;
+  border-radius: 5px;
+  justify-content: center;
+}
+.formacion-contenedor_step .circulo span {
+  width: 12px;
+  height: 90px;
+  color: #eb282b;
+  display: flex;
+  justify-content: center;
+}
+.formacion-contenedor_step .circulo span::after {
+  padding: 0 3px;
+  content: "";
+  position: absolute;
+  background-color: #eb282b;
+  width: 5px;
+  height: 90px;
+  border-radius: 5px;
+}
+
+.formacion-contenedor_texto {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 2rem;
+}
+.formacion-contenedor_texto .info-formacion p {
+  font-size: 1.6rem;
+}
+.formacion-contenedor_texto .info-formacion span {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #eb282b;
 }
