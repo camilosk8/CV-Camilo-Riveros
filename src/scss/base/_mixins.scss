@@ -101,3 +101,26 @@
   background-size: contain;
   background-position: $b-position;
 }
+
+@mixin bullets ($column, $row) {
+  justify-self: center;
+  width: 9px;
+  height: 9px;
+  background-color: v.$rojo;
+  border-radius: 5px;
+  grid-column: $column;
+  grid-row: $row;
+  margin: .7rem 0;
+}
+
+@mixin text-grid ($column, $row) {
+  grid-column: $column;
+  grid-row: $row;
+  p {
+    font-size: 1.5rem;
+  }
+  span {
+    color: v.$rojo;
+    font-size: 1.5rem;
+  }
+}
