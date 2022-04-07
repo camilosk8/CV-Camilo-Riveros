@@ -1,0 +1,20 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+.barra-experiencia {
+  width: 3px;
+  height: 300px;
+  background-color: v.$rojo;
+  justify-content: center;
+  margin: 1rem 2.4rem;
+  @include m.tablet {
+    margin: 1rem 3.88rem;
+  }
+  @include m.desktop {
+    margin: 1rem .4rem;
+    height: 155px;
+  }
+  @include m.desktopXL {
+    margin: .7rem .4rem;
+    height: 170px;
+  }
+}
