@@ -102,7 +102,7 @@
   background-position: $b-position;
 }
 
-@mixin bullets ($column, $row) {
+@mixin bullets($column, $row) {
   justify-self: center;
   width: 9px;
   height: 9px;
@@ -110,10 +110,10 @@
   border-radius: 5px;
   grid-column: $column;
   grid-row: $row;
-  margin: .7rem 0;
+  margin: 0.7rem 0;
 }
 
-@mixin text-grid ($column, $row) {
+@mixin text-grid($column, $row) {
   grid-column: $column;
   grid-row: $row;
   p {
@@ -123,4 +123,12 @@
     color: v.$rojo;
     font-size: 1.5rem;
   }
+}
+
+@mixin intereses {
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }

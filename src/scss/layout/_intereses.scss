@@ -1,0 +1,34 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.intereses-contenedor {
+  width: 90%;
+  height: 90%;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  gap: 10px;
+  p {
+    text-align: center;
+  }
+  .intereses-lenguajes {
+    @include m.intereses;
+
+    background-image: url("../../img/iconos-intereses/lenguajes.svg");
+  }
+  .intereses-ejercicio {
+    @include m.intereses;
+
+    background-image: url("../../img/iconos-intereses/ejercicio.svg");
+  }
+  .intereses-cursos {
+    @include m.intereses;
+
+    background-image: url("../../img/iconos-intereses/cursos.svg");
+  }
+  .intereses-arte {
+    @include m.intereses;
+
+    background-image: url("../../img/iconos-intereses/arte.svg");
+  }
+}
