@@ -1979,45 +1979,37 @@ template {
 }
 
 .intereses-contenedor {
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
   justify-content: center;
   display: grid;
   grid-template-columns: 2fr 2fr;
-  gap: 10px;
+  gap: 10px 10px;
 }
 .intereses-contenedor p {
   text-align: center;
 }
 .intereses-contenedor .intereses-lenguajes {
-  width: 60px;
-  height: 60px;
+  height: 40px;
+  background-position: center center;
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
   background-image: url("../../img/iconos-intereses/lenguajes.svg");
 }
 .intereses-contenedor .intereses-ejercicio {
-  width: 60px;
-  height: 60px;
+  height: 40px;
+  background-position: center center;
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
   background-image: url("../../img/iconos-intereses/ejercicio.svg");
 }
 .intereses-contenedor .intereses-cursos {
-  width: 60px;
-  height: 60px;
+  height: 35px;
+  background-position: center center;
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
   background-image: url("../../img/iconos-intereses/cursos.svg");
 }
 .intereses-contenedor .intereses-arte {
-  width: 60px;
-  height: 60px;
+  height: 40px;
+  background-position: center center;
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
   background-image: url("../../img/iconos-intereses/arte.svg");
 }

@@ -2,33 +2,37 @@
 @use "base/mixins" as m;
 
 .intereses-contenedor {
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
   justify-content: center;
   display: grid;
   grid-template-columns: 2fr 2fr;
-  gap: 10px;
+  gap: 10px 10px;
   p {
     text-align: center;
   }
   .intereses-lenguajes {
-    @include m.intereses;
-
+    height: 40px;
+    background-position: center center;
+    background-repeat: no-repeat;
     background-image: url("../../img/iconos-intereses/lenguajes.svg");
   }
   .intereses-ejercicio {
-    @include m.intereses;
-
+    height: 40px;
+    background-position: center center;
+    background-repeat: no-repeat;
     background-image: url("../../img/iconos-intereses/ejercicio.svg");
   }
   .intereses-cursos {
-    @include m.intereses;
-
+    height: 35px;
+    background-position: center center;
+    background-repeat: no-repeat;
     background-image: url("../../img/iconos-intereses/cursos.svg");
   }
   .intereses-arte {
-    @include m.intereses;
-
+    height: 40px;
+    background-position: center center;
+    background-repeat: no-repeat;
     background-image: url("../../img/iconos-intereses/arte.svg");
   }
 }
