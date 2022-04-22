@@ -4,33 +4,38 @@
 .intereses-contenedor {
   width: 100%;
   height: 100%;
+  margin-top: 10px;
   justify-content: center;
   display: grid;
   grid-template-columns: 2fr 2fr;
-  gap: 10px 10px;
+  gap: 20px 10px;
   p {
     text-align: center;
+    font-size: 2rem;
+  }
+  @include m.desktop {
+    grid: none;
   }
   .intereses-lenguajes {
-    height: 40px;
+    height: 60px;
     background-position: center center;
     background-repeat: no-repeat;
     background-image: url("../../img/iconos-intereses/lenguajes.svg");
   }
   .intereses-ejercicio {
-    height: 40px;
+    height: 60px;
     background-position: center center;
     background-repeat: no-repeat;
     background-image: url("../../img/iconos-intereses/ejercicio.svg");
   }
   .intereses-cursos {
-    height: 35px;
+    height: 55px;
     background-position: center center;
     background-repeat: no-repeat;
     background-image: url("../../img/iconos-intereses/cursos.svg");
   }
   .intereses-arte {
-    height: 40px;
+    height: 60px;
     background-position: center center;
     background-repeat: no-repeat;
     background-image: url("../../img/iconos-intereses/arte.svg");
