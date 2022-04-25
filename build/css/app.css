@@ -1978,45 +1978,81 @@ template {
   }
 }
 
+.contenedor-intereses {
+  margin: 1.5rem 0;
+}
+@media (min-width: 992px) {
+  .contenedor-intereses {
+    position: relative;
+    width: 90%;
+    display: flex;
+    place-self: center stretch;
+  }
+}
+
 .intereses-contenedor {
   width: 100%;
   height: 100%;
   margin-top: 10px;
   justify-content: center;
   display: grid;
-  grid-template-columns: 2fr 2fr;
-  gap: 20px 10px;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 0px;
 }
 .intereses-contenedor p {
   text-align: center;
   font-size: 2rem;
 }
-@media (min-width: 992px) {
-  .intereses-contenedor {
-    grid: none;
-  }
-}
 .intereses-contenedor .intereses-lenguajes {
-  height: 60px;
+  height: 65px;
   background-position: center center;
   background-repeat: no-repeat;
   background-image: url("../../img/iconos-intereses/lenguajes.svg");
 }
 .intereses-contenedor .intereses-ejercicio {
-  height: 60px;
+  height: 65px;
   background-position: center center;
   background-repeat: no-repeat;
   background-image: url("../../img/iconos-intereses/ejercicio.svg");
 }
 .intereses-contenedor .intereses-cursos {
-  height: 55px;
+  height: 60px;
   background-position: center center;
   background-repeat: no-repeat;
   background-image: url("../../img/iconos-intereses/cursos.svg");
 }
 .intereses-contenedor .intereses-arte {
-  height: 60px;
+  height: 65px;
   background-position: center center;
   background-repeat: no-repeat;
   background-image: url("../../img/iconos-intereses/arte.svg");
+}
+@media (min-width: 1200px) {
+  .intereses-contenedor {
+    width: 100%;
+    gap: 20px 0px;
+  }
+  .intereses-contenedor p {
+    font-size: 3rem;
+  }
+  .intereses-contenedor .intereses-lenguajes {
+    height: 85px;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  .intereses-contenedor .intereses-ejercicio {
+    height: 85px;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  .intereses-contenedor .intereses-cursos {
+    height: 80px;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  .intereses-contenedor .intereses-arte {
+    height: 85px;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
 }

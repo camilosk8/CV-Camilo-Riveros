@@ -1,43 +1,61 @@
 @use "base/variables" as v;
 @use "base/mixins" as m;
 
+.contenedor-intereses {
+  margin: 1.5rem 0;
+  @include m.desktop {
+    position: relative;
+    width: 90%;
+    display: flex;
+    place-self: center stretch;
+  }
+}
+
 .intereses-contenedor {
   width: 100%;
   height: 100%;
   margin-top: 10px;
   justify-content: center;
   display: grid;
-  grid-template-columns: 2fr 2fr;
-  gap: 20px 10px;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 0px;
   p {
     text-align: center;
     font-size: 2rem;
   }
-  @include m.desktop {
-    grid: none;
-  }
   .intereses-lenguajes {
-    height: 60px;
-    background-position: center center;
-    background-repeat: no-repeat;
+    @include m.intereses(65px);
     background-image: url("../../img/iconos-intereses/lenguajes.svg");
   }
   .intereses-ejercicio {
-    height: 60px;
-    background-position: center center;
-    background-repeat: no-repeat;
+    @include m.intereses(65px);
     background-image: url("../../img/iconos-intereses/ejercicio.svg");
   }
   .intereses-cursos {
-    height: 55px;
-    background-position: center center;
-    background-repeat: no-repeat;
+    @include m.intereses(60px);
     background-image: url("../../img/iconos-intereses/cursos.svg");
   }
   .intereses-arte {
-    height: 60px;
-    background-position: center center;
-    background-repeat: no-repeat;
+    @include m.intereses(65px);
     background-image: url("../../img/iconos-intereses/arte.svg");
+  }
+  @include m.desktopXL {
+    width: 100%;
+    gap: 20px 0px;
+    p {
+      font-size: 3rem;
+    }
+    .intereses-lenguajes {
+      @include m.intereses(85px);
+    }
+    .intereses-ejercicio {
+      @include m.intereses(85px);
+    }
+    .intereses-cursos {
+      @include m.intereses(80px);
+    }
+    .intereses-arte {
+      @include m.intereses(85px);
+    }
   }
 }
