@@ -1979,12 +1979,14 @@ template {
 }
 
 .contenedor-intereses {
+  display: flex;
+  flex-wrap: wrap;
   margin: 1.5rem 0;
 }
 @media (min-width: 992px) {
   .contenedor-intereses {
     position: relative;
-    width: 90%;
+    width: 100%;
     display: flex;
     place-self: center stretch;
   }
@@ -1997,6 +1999,7 @@ template {
   justify-content: center;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  place-self: center stretch;
   gap: 20px 0px;
 }
 .intereses-contenedor p {
